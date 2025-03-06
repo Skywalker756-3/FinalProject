@@ -12,13 +12,24 @@ This is an astrology website, it features:
 -	Tarot Card Readings
 -	Fortune Cookie
 
+## Basic Website Features
+
+### Consistant Navigation Bar
+
+### Consistant styling defined in style.css
+
+###
+
 ## Features
 
 ### Astrological Sign Identification
 This is an interface that lets users pick their sign, this sign will stay attached to the user's cookies. This way they won't need to repeatedly choose their sign if they don't have an account.
 
-### Login Account
-This is a system that saves the credentials of users to a database, their credentials are encrypted using _________ and stored into a (mysql/nosql/sql) database along with their profile pic (Stored as longblob in databases). The account's purpose on this site is for personalization. This includes content based on the user's astrology sign.
+### Login to Account
+This is a system that allows users to sign in with their credentials to a database, their credentials are encrypted using _________ and stored into a (mysql/nosql/sql) database along with their profile pic (Stored as longblob in databases). The account's purpose on this site is for personalization. This includes content based on the user's astrology sign.
+
+### Account Sign-up Page
+A webpage where the user enters their email and password along with a DOB which determines their sign. They can also optionally submit an image for their profile picture. After this they are automatically signed in.
 
 ### Daily horoscope
 Hover over an element to reveal the horoscope. (How do we first check the user's sign?)
@@ -27,13 +38,13 @@ Hover over an element to reveal the horoscope. (How do we first check the user's
 A webpage that describes how the moon phase effects the user's personal astrology. f the user doesn't have an account or their sign isn't collected in the cookies then open[this interface](Select Astrological Sign) If already in the cookies, just reference them for the sign.
 
 ### Personalized Horoscopes
-This is a personalized reading for the user based on their signs. These feature daily, weekly and monthly horoscopes. f the user doesn't have an account or their sign isn't collected in the cookies then open[this interface](Select Astrological Sign) If already in the cookies, just reference them for the sign.
+This is a webpage with personalized reading for the user based on their signs. These feature daily, weekly and monthly horoscopes. f the user doesn't have an account or their sign isn't collected in the cookies then open[this interface](Select Astrological Sign) If already in the cookies, just reference them for the sign.
 
-### Zodiac Sign Compatibility
-This is another personalization feature that describes the relational compatibility of the user's sign with other signs. Maybe this even has compatibility scores. If the user doesn't have an account or their sign isn't collected in the cookies then open[this interface](Select Astrological Sign) If already in the cookies, just reference them for the sign.
+### Zodiac Sign Compatibility Test
+This is webpage that describes the relational compatibility of the user's sign with other signs. This reveals compatibility scores and describes the relationship. If the user doesn't have an account or their sign isn't collected in the cookies then open[this interface](Select Astrological Sign) If already in the cookies, just reference them for the sign.
 
 ### Astral Sign Guessing Game
-This is a game where given a celebrity, users have to 3 guesses to predict what sign a celebrity is. If we do the compatibility scores then
+This is a webpage that functinos as a game where given a celebrity, users have to 3 guesses to predict what sign a celebrity is. The user is directed to the 
 
 ### Reviews
 This is a section that displays cards of user reviews, a user can make a review with their account and it's stored into the database. This will be at the bottome of the home webpage.
