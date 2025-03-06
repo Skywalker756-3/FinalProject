@@ -1,26 +1,53 @@
 # FinalProject
 This is an astrology website, it features:
 
-- Login account system
-- Community Forum
-- Horoscopes
-- Sign Identification
+-   Login account system
+-   Horoscopes
+-   Sign Identification
 -	Sign compatibility 
 -	Astral Sign Guessing Game
-- Downloadable Wallpapers for each sign
+-   Downloadable Wallpapers for each sign
 -	Star Graph
 -	Tarot Card Readings
 -	Fortune Cookie
 
-## Basic Website Features
+
+Below these ideas are expanded on
+
+## Fundamental Website Components and Techniques
 
 ### Consistant Navigation Bar
+A bar at the top that leads to important webpages, it puts an emphasis on the login button and the top left is the name of the site which leads to the homepage.
 
 ### Consistant styling defined in style.css
+Use a similar theme for the background and font among elements, be sure to use classes for more specific use cases.
 
-###
+### Responsive Design
+This is designing for multiple different types of devices and users, we need the webpages to respond to changes in webpage size.
+https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design
 
-## Features
+#### Best Practices:
+
+##### Media Queries
+These are used to determine information about a user's 
+
+##### Fluid Grids
+
+##### Fluid Images
+
+##### Fluid Media Queries
+
+##### Mobile Users
+Mobile users tend to make more emotional decisions so our layout  should reflect that
+
+Grid design
+Using a grid means that our changes will adapt to mobile more easily. This is a neccasity especiallly if we are working on the same webpage as someone else. The best info out there is right here: 
+
+TLDR: 
+
+Use voxel height: vh and voxel width: vw which can express pixels in terms of the relative block.
+
+## Important Features
 
 ### Astrological Sign Identification
 This is an interface that lets users pick their sign, this sign will stay attached to the user's cookies. This way they won't need to repeatedly choose their sign if they don't have an account.
@@ -32,7 +59,7 @@ This is a system that allows users to sign in with their credentials to a databa
 A webpage where the user enters their email and password along with a DOB which determines their sign. They can also optionally submit an image for their profile picture. After this they are automatically signed in.
 
 ### Daily horoscope
-Hover over an element to reveal the horoscope. (How do we first check the user's sign?)
+This is an element of the homepage, Hover over the element to reveal the horoscope. (How do we first check the user's sign? also mobile compatiblity?)
 
 ### Lunar Phases and Astrology
 A webpage that describes how the moon phase effects the user's personal astrology. f the user doesn't have an account or their sign isn't collected in the cookies then open[this interface](Select Astrological Sign) If already in the cookies, just reference them for the sign.
@@ -52,6 +79,11 @@ This is a section that displays cards of user reviews, a user can make a review 
 ### Account links
 These are links to our companies social media pages, this will be at the bottom of each webpage
 
-## Bonus
+### Star Graph
+This is a webpage with a graph of the stars, if users hover over / click a star system that is associated with an astrology then the information is expanded and users can read more.
 
-## 
+### Tarot Card Reading
+This one was suggested by the professor, I'd like your input for this one bc idk.
+
+### Fortune Cookie
+Likely going to be on the homepage. The user can click on a fortune cookie for a cute animation and then read some worldly advice. From here we can save the user's cookie opening to their browser's cookies. Users can open another fortune cookie in 24 hours.
