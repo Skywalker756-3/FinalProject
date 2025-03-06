@@ -20,7 +20,7 @@ Below these ideas are expanded on
 A bar at the top that leads to important webpages, it puts an emphasis on the login button and the top left is the name of the site which leads to the homepage.
 
 ### Consistant styling defined in style.css
-Use a similar theme for the background and font among elements, be sure to use classes for more specific use cases.
+Use a similar theme for the background and font among elements, be sure to use classes for more specific use cases. Avoid using inline CSS as much as possible.
 
 ### Responsive Design
 This is designing for multiple different types of devices and users, we need the webpages to respond to changes in webpage size.
@@ -29,9 +29,10 @@ https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/R
 #### Best Practices:
 
 ##### Media Queries
-These are used to determine information about a user's 
+These are used to determine information about a user's screensize. We will use this to dynamically use single column layouts for narrow screens. Some content might even be disabled for certain screen sizes as a trade off for the user experience.
 
-##### Fluid Grids
+##### Flexboxes
+These are boxes that are used to automatically resize
 
 ##### Fluid Images
 
@@ -53,7 +54,7 @@ Use voxel height: vh and voxel width: vw which can express pixels in terms of th
 This is an interface that lets users pick their sign, this sign will stay attached to the user's cookies. This way they won't need to repeatedly choose their sign if they don't have an account.
 
 ### Login to Account
-This is a system that allows users to sign in with their credentials to a database, their credentials are encrypted using _________ and stored into a (mysql/nosql/sql) database along with their profile pic (Stored as longblob in databases). The account's purpose on this site is for personalization. This includes content based on the user's astrology sign.
+This is either a webpage or dropdown menu that allows users to sign in with their credentials to a database, their credentials are encrypted using _________ and stored into a (mysql/nosql/sql) database along with their profile pic (Stored as longblob in databases). The account's purpose on this site is for personalization. This includes content based on the user's astrology sign.
 
 ### Account Sign-up Page
 A webpage where the user enters their email and password along with a DOB which determines their sign. They can also optionally submit an image for their profile picture. After this they are automatically signed in.
