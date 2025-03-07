@@ -24,29 +24,79 @@ Use a similar theme for the background and font among elements, be sure to use c
 
 ### Responsive Design
 This is designing for multiple different types of devices and users, we need the webpages to respond to changes in webpage size.
+
+This link provides more in depth detail on responsive design and elaborates on the details.
 https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design
 
-#### Best Practices:
+### Best Practices:
 
-##### Media Queries
-These are used to determine information about a user's screensize. We will use this to dynamically use single column layouts for narrow screens. Some content might even be disabled for certain screen sizes as a trade off for the user experience.
+#### Media Queries
 
-##### Flexboxes
-These are boxes that are used to automatically make all it's children elements take up the same amount of space
+These are used to determine information about a user's system. For example this CSS code conditionally uses the inner CSS on a container if the webpage is being viewed as a screen media and there is at least 80rem wide space in it's current context.
 
-##### Fluid Images
+``` CSS
+@media screen and (min-width: 80rem) {
+  .container {
+    margin: 1em 2em;
+  }
+}
+```
 
-##### Fluid Media Queries
+]Some content might even be disabled for certain screen sizes as a trade off for the user experience.
 
-##### Mobile Users
-Mobile users tend to make more emotional decisions so our layout  should reflect that
+### Flexboxes
 
-Grid design
-Using a grid means that our changes will adapt to mobile more easily. This is a neccasity especiallly if we are working on the same webpage as someone else. The best info out there is right here: 
+These are containers that automatically resize to fit their children; by default it fits them all at an equal size. We usually implement flexboxes onto the div element, where we set it's class to one defined in the CSS file that has the key value of: "display:flex" For each child we can define their proportion of the flexbox using the "flex" property.
 
-TLDR: 
 
-Use voxel height: vh and voxel width: vw which can express pixels in terms of the relative block.
+``` CSS
+.container {
+  display: flex;
+}
+
+.item {
+  flex: 1;
+}
+```
+
+
+We prefer flexboxes on content that will likely see many changes in the future. Especially user generated content.
+### CSS Grids
+
+This approach let's us enforce a flexible layout regardless of how many children there are. Otherwise this is very similar to flexboxes. To implement this we use the "display:grid" in it's CSS class along with some variation of "grid-". It uses "fr" units which are a fraction of the available space
+
+``` CSS
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+```
+
+
+We prefer to use CSS grid on things we want to keep consistent on the website. It's a good idea to frame out the consistent parts of the site to the grid like the header, navigation, footer etc.
+
+### Fluid Images / Video
+ Some media types like images and video might expand past the flexbox. To mitigate this use a maximum on the pixel size to be 100% which refers to the max size of it's parent.
+
+### Responsive Text
+This works differently from other responsiveness because we want to preserve user's ability to zoom into text. For the most part we use the aforementioned [[Responsive Design#Media Queries|Media Queries]] to set the fonts. Below is an example where mobile phones can't see the 4x scaled font.
+
+``` CSS
+html {
+  font-size: 1em;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 4rem;
+  }
+}
+```
+*em is relative to the font of the element, rem is relative to the font of the parent element*
 
 ## Important Features
 
