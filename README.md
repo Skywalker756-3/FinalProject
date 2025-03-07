@@ -16,6 +16,12 @@ Below these ideas are expanded on
 
 ## Fundamental Website Components and Techniques
 
+### New script tradeoff
+Whenever we add a new script file the browser has to load that in-between webpages which can reduce the user experience. However loading a very heavy script in would reduce the time to enter the website in general. So we try to find a balance where we give script heavy webpages their own script.
+
+### Load Script Last
+In general we load the scripts in last to prevent the page from being viewable without the visual elements, this is a small tradeoff for enhancing the user experience.
+
 ### Consistant Navigation Bar
 A bar at the top that leads to important webpages, it puts an emphasis on the login button and the top left is the name of the site which leads to the homepage.
 
