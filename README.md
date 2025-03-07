@@ -34,7 +34,7 @@ This is designing for multiple different types of devices and users, we need the
 This link provides more in depth detail on responsive design and elaborates on the details.
 https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design
 
-### Best Practices:
+### Best Practices for Responsive Design:
 
 #### Media Queries
 
