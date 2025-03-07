@@ -42,9 +42,9 @@ These are used to determine information about a user's system. For example this 
 }
 ```
 
-]Some content might even be disabled for certain screen sizes as a trade off for the user experience.
+Some content might even be disabled for certain screen sizes as a trade off for the user experience.
 
-### Flexboxes
+#### Flexboxes
 
 These are containers that automatically resize to fit their children; by default it fits them all at an equal size. We usually implement flexboxes onto the div element, where we set it's class to one defined in the CSS file that has the key value of: "display:flex" For each child we can define their proportion of the flexbox using the "flex" property.
 
@@ -61,7 +61,7 @@ These are containers that automatically resize to fit their children; by default
 
 
 We prefer flexboxes on content that will likely see many changes in the future. Especially user generated content.
-### CSS Grids
+#### CSS Grids
 
 This approach let's us enforce a flexible layout regardless of how many children there are. Otherwise this is very similar to flexboxes. To implement this we use the "display:grid" in it's CSS class along with some variation of "grid-". It uses "fr" units which are a fraction of the available space
 
@@ -75,11 +75,11 @@ This approach let's us enforce a flexible layout regardless of how many children
 
 We prefer to use CSS grid on things we want to keep consistent on the website. It's a good idea to frame out the consistent parts of the site to the grid like the header, navigation, footer etc.
 
-### Fluid Images / Video
+#### Fluid Images / Video
  Some media types like images and video might expand past the flexbox. To mitigate this use a maximum on the pixel size to be 100% which refers to the max size of it's parent.
 
-### Responsive Text
-This works differently from other responsiveness because we want to preserve user's ability to zoom into text. For the most part we use the aforementioned [[Responsive Design#Media Queries|Media Queries]] to set the fonts. Below is an example where mobile phones can't see the 4x scaled font.
+#### Responsive Text
+This works differently from other responsiveness because we want to preserve user's ability to zoom into text. For the most part we use the aforementioned #Media Queries to set the fonts. Below is an example where mobile phones can't see the 4x scaled font.
 
 ``` CSS
 html {
