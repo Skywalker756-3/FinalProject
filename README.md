@@ -32,7 +32,7 @@ https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/R
 These are used to determine information about a user's screensize. We will use this to dynamically use single column layouts for narrow screens. Some content might even be disabled for certain screen sizes as a trade off for the user experience.
 
 ##### Flexboxes
-These are boxes that are used to automatically resize
+These are boxes that are used to automatically make all it's children elements take up the same amount of space
 
 ##### Fluid Images
 
