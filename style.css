@@ -16,7 +16,7 @@ body {
   font-size: 20px;
   text-align: center;
   @media (min-width: 1200px) {
-      h1 {
+      .navigationBar {
         font-size: 4rem;
       }
     }
