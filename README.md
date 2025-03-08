@@ -5,7 +5,9 @@ This is an astrology website, it features:
 -   Horoscopes
 -   Sign Identification
 -	Sign compatibility 
--	Astral Sign Guessing Game
+-   Matching game sign to pictures
+
+Lowest Priority
 -   Downloadable Wallpapers for each sign
 -	Star Graph
 -	Tarot Card Readings
