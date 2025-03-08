@@ -3,9 +3,13 @@ This is an astrology website, it features:
 
 -   Login account system
 -   Horoscopes
+-   Home page
+-   Blog
+    - Lunar phases
 -   Sign Identification
 -	Sign compatibility 
 -   Matching game sign to pictures
+-   Newsletter
 
 Lowest Priority
 -   Downloadable Wallpapers for each sign
