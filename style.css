@@ -22,6 +22,7 @@ video {
     color: whitesmoke;
     font-size: larger;
     text-align: center;
+    padding:35%;
 }
 .navigationBar{
   display: grid;
@@ -58,7 +59,7 @@ img{
     border-radius: 20px;
 }
 .doubleColumn{
-    display: grid;
+    display: inline-grid;
     grid-template-columns: 1fr 1fr;
     margin-left: 15%;
     margin-right: 15%;
