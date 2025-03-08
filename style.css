@@ -5,6 +5,13 @@ body {
     background-size: cover;
     color: whitesmoke;
 }
+img,
+picture,
+video {
+  max-width: 100%;
+  /*This ensures that media is never bigger than it's respective container*/
+}
+
 /*Classes*/
 .majorTitle{
     color: yellow;
@@ -50,13 +57,18 @@ img{
     color: yellow;
     border-radius: 20px;
 }
-.dailyHoroscope{
+.doubleColumn{
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
     margin-left: 15%;
     margin-right: 15%;
 }
-.imageMedium{
-    max-width:800px;
-    padding-block: 5%;
+.doubleRow{
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.imageContain{
+    object-fit: contain;
 }
