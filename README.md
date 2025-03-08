@@ -6,6 +6,7 @@ This is an astrology website, it features:
 -   Home page
 -   Blog
     - Lunar phases
+    - Energy in the stars
 -   Sign Identification
 -	Sign compatibility 
 -   Matching game sign to pictures
