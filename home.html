@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" href="./style.css">
+    <title>Welcom to the Cosimic Compass</title>
 </head>
 <body>
+    <!-- Navigation Bar-->
     <nav>
         <div class="navigationBar">
             <a class="navigationButton" href = ./home.html style="text-align: left;">
@@ -37,5 +39,122 @@
             </a>
         </div>
     </nav>
-    <h1 class="majorTitle">Title</h1>
+    <h1 class="majorTitle"></h1>
+    <header>
+        <h1>Welcome to the Cosmic Compass</h1>
+        <h2>Reflecting Your Stars, Your Story</h2>
+    </header>
+    
+    <!-- Section 1: Interactive Horscopes -->
+    <section id="zodiac-section">
+        <map name="image-map">
+            <area target="" alt="aries" title="aries" href="" coords="209,159,437,246,215,652,-3,593,11,138" shape="poly">
+            <area target="" alt="taurus" title="taurus" href="" coords="443,252,212,652,363,795,755,564,628,381" shape="poly">
+        </map>
+        <div id="hover-text"></div>
+    
+    </section>
+    
+
+    <!-- Section 2: Three Columns -->
+    <section id="links-section">
+        <h2>More In the Realm of Possibilities</h2>
+        <div class="section2-content">
+            <div class="column" onclick="navigateTo('horoscopes.html')">
+                <div class="text-content">
+                  <h1>Horoscopes</h1>
+                  <p>Daily, weekly, and monthly horoscopes.</p>
+                </div>
+                <img src="images/thumbnail1.jpg" alt="Horoscopes">
+              </div>
+        <div class="column" onclick="navigateTo('compatibility.html')">
+          <div class="text-content">
+            <h1>Compatibility Test</h1>
+            <p>Explore the compatibility between your sign and other star signs</p>
+          </div>
+          <img src="images/thumbnail2.jpg" alt="Compatibility Test">
+        </div>
+        
+        <div class="column" onclick="navigateTo('blog.html')">
+          <div class="text-content">
+            <h1>Blog</h1>
+            <p>Track the phases of the moon and how they impact your energy levels</p>
+          </div>
+          <img src="images/thumbnail3.jpg" alt="Blog">
+        </div>
+    </div>
+      </section>
+      
+    
+    
+      
+   <!-- Section 3: Text and Image -->
+<section id="info-section">
+    <div class="info-text">
+        <h1>Discover Your Horoscope</h1>
+        <h2>Daily, Weekly, Monthly Insights</h2>
+        <p>Explore how the stars align for you today and beyond.Your horoscope reveals the cosmic energies influencing your life.</p>
+        <button onclick="navigateTo('horoscopes.html')">Read Your Horoscope</button>
+        <!-- Daily, Weekly, Monthly Options -->
+        <div class="info-options">
+            <div class="info-option">
+                <h3>Daily</h3>
+                <p>Get a quick look into the influences guiding your day.</p>
+            </div>
+            <div class="info-option">
+                <h3>Weekly</h3>
+                <p>Plan your week with insights on opportunities and challenges.</p>
+            </div>
+            <div class="info-option">
+                <h3>Monthly</h3>
+                <p>Dive deep into the energies shaping your month ahead.</p>
+            </div>
+        </div>
+    </div>
+    <img class="section3-img" src="images/section3.jpg" alt="">
+</section>
+
+    
+    <!-- Section 4: Reviews -->
+ 
+<section id="reviews-section">
+    <h2>What Our Users Say</h2>
+    <div class="reviews-container">
+        <div class="review">
+            <p>"Amazing insights into my zodiac journey!"</p>
+            <span>- Luna Star</span>
+        </div>
+        <div class="review">
+            <p>"Loved the compatibility test! It helped me understand my relationships better."</p>
+            <span>- Cosmic Dreamer</span>
+        </div>
+        <div class="review">
+            <p>"The horoscopes are so accurate! It's like they read my mind."</p>
+            <span>- Starlight Seeker</span>
+        </div>
+        <div class="review">
+            <p>"The blog articles are so informative and fun to read. I visit the site every day!"</p>
+            <span>- Nova Wanderer</span>
+        </div>
+        
+    </div>
+</section>
+
+  
+   
 </body>
+<!-- Footer Section -->
+<footer id="footer">
+    <div class="footer-container">
+        <div class="footer-links">
+            <a href="horoscopes.html">Horoscopes</a>
+            <a href="blog.html">Blog</a>
+            <a href="compatibility.html">Compatibility Test</a>
+            <a href="newsletter.html">Newsletter</a>
+        </div>
+        <p>&copy; 2025 Cosmic Compass. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+<footer></footer>

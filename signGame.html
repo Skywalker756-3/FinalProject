@@ -3,5 +3,50 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-<h1>Title</h1>
+    <!--Matching Game-->
+    <div class="game-container">
+        <h1>Celestial Connections: Match the Rulers of the Zodiac</h1>
+        <p>Drag the zodiac symbols to their corresponding ruling planets!</p>
+      
+        <div class="game-board">
+          <!-- Zodiac Symbols -->
+          <div class="zodiac-container">
+            <h2>Zodiac Signs</h2>
+            <div class="zodiac-grid">
+              <div class="zodiac-item" draggable="true" id="aries">♈ Aries</div>
+              <div class="zodiac-item" draggable="true" id="taurus">♉ Taurus</div>
+              <div class="zodiac-item" draggable="true" id="gemini">♊ Gemini</div>
+              <div class="zodiac-item" draggable="true" id="cancer">♋ Cancer</div>
+              <div class="zodiac-item" draggable="true" id="leo">♌ Leo</div>
+              <div class="zodiac-item" draggable="true" id="virgo">♍ Virgo</div>
+              <div class="zodiac-item" draggable="true" id="libra">♎ Libra</div>
+              <div class="zodiac-item" draggable="true" id="scorpio">♏ Scorpio</div>
+              <div class="zodiac-item" draggable="true" id="sagittarius">♐ Sagittarius</div>
+              <div class="zodiac-item" draggable="true" id="capricorn">♑ Capricorn</div>
+              <div class="zodiac-item" draggable="true" id="aquarius">♒ Aquarius</div>
+              <div class="zodiac-item" draggable="true" id="pisces">♓ Pisces</div>
+            </div>
+          </div>
+      
+          <!-- Planets -->
+          <div class="planet-container">
+            <h2>Planets</h2>
+            <div class="planet-item" id="mars">Mars</div>
+            <div class="planet-item" id="venus">Venus</div>
+            <div class="planet-item" id="mercury">Mercury</div>
+            <div class="planet-item" id="moon">Moon</div>
+            <div class="planet-item" id="sun">Sun</div>
+            <div class="planet-item" id="jupiter">Jupiter</div>
+            <div class="planet-item" id="saturn">Saturn</div>
+            <div class="planet-item" id="uranus">Uranus</div>
+            <div class="planet-item" id="neptune">Neptune</div>
+            <div class="planet-item" id="pluto">Pluto</div>
+          </div>
+        </div>
+      
+        <button id="check-results">Check Results</button>
+        <div id="result"></div>
+      </div>
+      
+      <script src="script.js"></script>
 </body>
