@@ -20,9 +20,9 @@ video {
 }
 .minorTitle{
     color: whitesmoke;
-    font-size: larger;
+    font-size: 50px;
     text-align: center;
-    padding:35%;
+    margin: auto;
 }
 .navigationBar{
   display: grid;
@@ -63,13 +63,12 @@ img{
     grid-template-columns: 1fr 1fr;
     margin-left: 15%;
     margin-right: 15%;
+    gap: 2%;
 }
-.doubleRow{
+.titleWithCard{
     display: grid;
-    grid-template-rows: 3fr 1fr;
+    grid-template-rows: 12em auto auto;
     margin-left: 15%;
     margin-right: 15%;
-}
-.imageContain{
-    object-fit: contain;
+    gap: 2%;
 }
