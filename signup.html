@@ -1,7 +1,211 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="./style.css">
+  <!-- Meta Information -->
+  <meta charset="UTF-8"> <!-- Specifies the character encoding for the document -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsiveness across devices -->
+  <title>Cosmic Compass</title> <!-- Title displayed in the browser tab -->
+
+  <!-- Internal CSS for Styling -->
+  <style>
+    /* General Reset - Standardized Margins, Padding, and Box-Sizing */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body Styling */
+    body {
+      font-family: Arial, sans-serif; /* Sets a clean and readable font */
+      color: white; /* Default text color */
+      margin: 0;
+      padding: 0;
+      position: relative; /* Allows absolutely positioned elements */
+      min-height: 100vh; /* Ensures full-screen height for the body */
+    }
+
+    /* Background Image Styling */
+    .background-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures the image covers the screen */
+      z-index: -1; /* Positions the image behind other content */
+    }
+
+    /* Header Styling */
+    header {
+      background: rgba(0, 37, 77, 0.9); /* Navy blue background for the header */
+      padding: 10px 20px;
+    }
+
+    /* Navigation Bar Styling */
+    nav {
+      display: flex; /* Aligns items horizontally */
+      justify-content: space-between; /* Spaces out elements evenly */
+      align-items: center; /* Aligns items vertically */
+    }
+
+    nav h1 {
+      margin: 0; /* Removes default margin for the heading */
+    }
+
+    nav ul {
+      list-style: none; /* Removes bullet points for the list */
+      display: flex; /* Displays list items horizontally */
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin-left: 20px; /* Spaces out navigation items */
+    }
+
+    nav ul li a {
+      color: white; /* Makes links white */
+      text-decoration: none; /* Removes underline from links */
+    }
+
+    /* Container for Main Content */
+    .container {
+      position: relative; /* Allows for overlapping elements */
+      padding: 20px;
+      max-width: 800px; /* Limits content width */
+      margin: 0 auto; /* Centers content */
+    }
+
+    /* Section Heading Styling */
+    .section-heading {
+      font-size: 2rem;
+      text-align: center; /* Centers the headings */
+      color: rgba(255, 255, 255, 0.8); /* Slightly transparent white text */
+      margin-bottom: 10px;
+    }
+
+    /* Section Backgrounds */
+    section {
+      margin: 20px 0; /* Adds space around sections */
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.7); /* Adds a dark translucent background */
+      border-radius: 10px; /* Rounds the corners of the sections */
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Adds a subtle glow */
+    }
+
+    /* Input Field Styling */
+    form input, form textarea {
+      width: 100%; /* Stretches the inputs to full width */
+      padding: 8px; /* Adds padding inside the fields */
+      margin: 5px 0; /* Adds spacing between fields */
+      border: 1px solid rgba(255, 255, 255, 0.5); /* Light border */
+      background: rgba(255, 255, 255, 0.1); /* Transparent background */
+      color: white; /* White text inside the fields */
+      border-radius: 5px; /* Slightly rounded corners */
+    }
+
+    form input::placeholder, form textarea::placeholder {
+      color: rgba(255, 255, 255, 0.7); /* Light gray placeholders */
+    }
+
+    /* Button Styling */
+    button {
+      background-color: rgba(0, 85, 204, 0.8); /* Blue background */
+      color: white; /* White button text */
+      padding: 10px 50px;
+      border: none; /* Removes default border */
+      border-radius: 5px; /* Rounded corners */
+      font-size: 1rem;
+      cursor: pointer; /* Pointer cursor on hover */
+      transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth hover effect */
+    }
+
+    button:hover {
+      background-color: rgba(0, 65, 155, 0.8); /* Darker blue on hover */
+      transform: scale(1.05); /* Slight zoom-in effect */
+    }
+
+    /* Footer Styling */
+    footer {
+      background: rgba(0, 37, 77, 0.9); /* Matches the header's navy blue */
+      color: white; /* White text */
+      padding: 20px 0;
+      text-align: center; /* Centers footer content */
+    }
+
+    /* Responsive Design for Smaller Screens */
+    @media (max-width: 768px) {
+      .container {
+        width: 90%; /* Reduces width on small screens */
+      }
+    }
+  </style>
 </head>
+
 <body>
-<h1>Title</h1>
+  <!-- Background Image -->
+  <img src="Background.png" alt="Background Image" class="background-image">
+
+  <!-- Header Section -->
+  <header>
+    <nav>
+      <h1>Cosmic Compass</h1>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Log In</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <!-- Log In Section -->
+      <h2 class="section-heading">Log In to your Account</h2>
+      <section class="login">
+        <form>
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password">
+          <button type="submit">Sign In</button>
+          <p><a href="#">Forgot password?</a></p>
+        </form>
+      </section>
+
+      <!-- Registration Section -->
+      <h2 class="section-heading">Don't have an account? Register now</h2>
+      <section class="register">
+        <form>
+          <label for="first-name">First name</label>
+          <input type="text" id="first-name" placeholder="Enter your first name">
+          <label for="last-name">Last name</label>
+          <input type="text" id="last-name" placeholder="Enter your last name">
+          <label for="register-email">Email</label>
+          <input type="email" id="register-email" placeholder="Enter your email">
+          <label for="reason">We're listening!</label>
+          <textarea id="reason" placeholder="Your question or message"></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 Cosmic Compass. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Form Submission -->
+  <script>
+    // Adds an alert when a form is submitted successfully
+    document.querySelectorAll("form").forEach(form => {
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            alert("Form submitted successfully!");
+        });
+    });
+  </script>
 </body>
+</html>
