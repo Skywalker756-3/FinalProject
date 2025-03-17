@@ -93,3 +93,9 @@ video {
         background: rgba(10, 10, 60, 0.8); /* Darker hover effect */
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Enhanced hover shadow */
 }
+
+.pageWrapper{
+    padding-top: 2%;
+    padding-left: 15%;
+    padding-right: 15%;
+}
