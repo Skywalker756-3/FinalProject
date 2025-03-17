@@ -6,6 +6,13 @@ function navigateTo(url) {
 
 //Sign Storage and Retrieval
 
+function SignDisplay()
+{
+  //This is a temporary function to adjust the text of elements with the class "CurrentSign"
+  //to the current sign. It is error prone so only use it as a placeholder
+  document.getElementById("CurrentSign").innerText=getSign()
+}
+setInterval(SignDisplay,100)
 function hasSignTempStorage()
 {
   /* HELPER FUNCTION
@@ -40,11 +47,11 @@ function hasSign()
   */
 
   //Use the two helper functions to determine where the sign is.
-  if(hasSignTempStorage())
+  if(hasSignTempStorage()==1)
   {
     return 1
   }
-  else if(hasSignAccount())
+  else if(hasSignAccount()==1)
   {
     return 2
   }
@@ -53,7 +60,7 @@ function hasSign()
 function getSign()
 {
   /*
-  Returns a number corresponding to the sign of the user, if unavailable it will return null
+  Returns a string corresponding to the sign of the user, if unavailable it will return null
   */
  let signLocation = hasSign()
  switch(signLocation)
@@ -75,6 +82,6 @@ function setSign(sign)
   /*
   Given the String: "sign" set the WebAPI variable for the sign to match it
   */
-  localStorage.setItem("CosmicCompass",sign)
+  localStorage.setItem("CosmicCompass:sign",sign)
 }
 
