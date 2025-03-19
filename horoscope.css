@@ -7,7 +7,7 @@ h1, h2, h3 {
   color: #CBB067; /* Gold for headings */
 }
 body {
-    background-image: url(images/Background.png);
+    background-image: url(images/bg1.jpg);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -26,6 +26,7 @@ video {
     color: #CBB067;
     text-shadow:3vw;
     text-align: center;
+    font-size: 4rem;
 }
 .minorTitle{
     color: whitesmoke;
@@ -83,7 +84,7 @@ video {
     grid-template-columns: 140px 140px 140px 140px 140px 140px;
     grid-template-rows :  100px 100px;
     padding: 2%;
-    background-color: grey;
+    background-size: contain;
     gap: 10px;
     justify-content: center;
     flex-wrap: wrap;
@@ -91,11 +92,16 @@ video {
 /*Signs that are used as buttons*/
 .signSelector > div {
     background-color: #000229;
-    min-width: 280px;
+    min-width: 140px
+}
+.signChangeButton {
+    /*This is used in JS to update the sign whenever anything with this class is clicked*/
+    transform: scale(1);
 }
 .signSelector > div:hover {
         background: rgba(10, 10, 60, 0.8); /* Darker hover effect */
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Enhanced hover shadow */
+        transform: scale(1.05)
 }
 
 .pageWrapper{
@@ -105,6 +111,7 @@ video {
     padding-left: 15%;
     padding-right: 15%;
     justify-content: center;
+    background-image: url(images/screen3_stars1.png);
 }
 /*
 RETIRED
