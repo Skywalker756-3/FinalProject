@@ -7,7 +7,7 @@ h1, h2, h3 {
   color: #CBB067; /* Gold for headings */
 }
 body {
-    background-color: #030621;
+    background-image: url(images/Background.png);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -64,19 +64,51 @@ video {
     color: yellow;
     border-radius: 20px;
 }
-.doubleColumn{
+.horoscope{
     display: inline-grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     margin-left: 15%;
     margin-right: 15%;
     gap: 2%;
 }
-.titleWithCard{
+.titleWihSubtitle{
     display: grid;
     margin-left: 15%;
     margin-right: 15%;
+    grid-template-rows: 2fr 1fr;
 }
 .signSelector{
+    display: flex;
+    grid-template-columns: 140px 140px 140px 140px 140px 140px;
+    grid-template-rows :  100px 100px;
+    padding: 2%;
+    background-color: grey;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+/*Signs that are used as buttons*/
+.signSelector > div {
+    background-color: #000229;
+    min-width: 280px;
+}
+.signSelector > div:hover {
+        background: rgba(10, 10, 60, 0.8); /* Darker hover effect */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Enhanced hover shadow */
+}
+
+.pageWrapper{
+    display:grid;
+    gap:3%;
+    padding-top: 2%;
+    padding-left: 15%;
+    padding-right: 15%;
+    justify-content: center;
+}
+/*
+RETIRED
+signSelectorgrid{
     display: grid;
     grid-template-columns: 140px 140px 140px 140px 140px 140px;
     grid-template-rows :  100px 100px;
@@ -85,17 +117,47 @@ video {
     gap: 10px;
     justify-content: center;
 }
-/*Signs that are used as buttons*/
-.signSelector > div {
-    background-color: green;
-}
-.signSelector > div:hover {
-        background: rgba(10, 10, 60, 0.8); /* Darker hover effect */
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Enhanced hover shadow */
-}
+*/
 
-.pageWrapper{
-    padding-top: 2%;
-    padding-left: 15%;
-    padding-right: 15%;
-}
+
+/*Mahnoor's Footer Styling*/
+/* Footer Styling */
+#footer {
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent white background */
+    color: #ffffff; /* Text color */
+    text-align: center; /* Center align text */
+    padding: 20px 0; /* Spacing for the footer */
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border on top */
+  }
+  
+  .footer-container {
+    max-width: 1200px; /* Constrain the width */
+    margin: 0 auto; /* Center the content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Space between elements */
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 15px; /* Space between links */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  }
+  
+  .footer-links a {
+    color: #ffffff; /* White text color for links */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make the links bold */
+    transition: color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .footer-links a:hover {
+    color: #ffd700; /* Change to gold on hover */
+  }
+  
+  footer p {
+    font-size: 0.9rem; /* Smaller font for copyright text */
+    opacity: 0.8; /* Slightly transparent text */
+    margin-top: 10px;
+  }
