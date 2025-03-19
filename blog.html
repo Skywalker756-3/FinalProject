@@ -1,7 +1,325 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunar Phases and Astrology</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Georgia', serif;
+            color: white;
+            background: url('images/Background.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Header Styling */
+        header {
+            background: rgba(0, 37, 77, 0.9);
+            padding: 10px 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .navigation-bar {
+            display: flex;
+            flex-wrap: wrap; /*  Allows wrapping on small screens */
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: color 0.3s ease, background-color 0.3s ease;
+            font-family: Arial, sans-serif;
+        }
+
+        .nav-link:hover {
+            color: #ffc107;
+        }
+
+        .nav-link.highlighted {
+            background-color: #ffc107;
+            color: black;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        /* Hero Section */
+        .hero {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero h1 {
+            color: #ffc107;
+            font-size: 2.5rem;
+        }
+
+        .hero p {
+            color: #f5f5f5;
+            font-size: 1.2rem;
+            max-width: 80%;
+            text-align: center;
+        }
+
+        /* Section Layout */
+        .section-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .section-text {
+            flex: 1;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .section-text h2 {
+            color: #ffa500;
+            margin-bottom: 10px;
+        }
+
+        .section-text p.short-description {
+            font-style: italic;
+            color: #f5f5f5;
+        }
+
+        .section-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .section-image img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .reverse {
+            flex-direction: row-reverse;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: #ffcc00;
+            color: black;
+        }
+
+        .btn-primary:hover {
+            background-color: #ffaa00;
+        }
+
+        /* Modal Styling */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .modal-content {
+    background-color: #1a1a2e;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    max-height: 90vh; /* Prevents it from exceeding the viewport height */
+    overflow-y: auto; /* Allows scrolling if content is taller than the screen */
+    text-align: center;
+    color: #fff;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Footer Styling */
+        footer {
+            background: rgba(0, 37, 77, 0.9);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* ✅ Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            .section-container {
+                flex-direction: column; /* ✅ Stack sections on small screens */
+                text-align: center;
+            }
+
+            .reverse {
+                flex-direction: column;
+            }
+
+            .section-text {
+                text-align: center;
+            }
+
+            .section-image img {
+                max-width: 80%;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+
+    </style>
 </head>
 <body>
-<h1>Title</h1>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="navigation-bar">
+                <a href="home.html" class="nav-link">Cosmic Compass</a>
+                <a href="horoscopes.html" class="nav-link">Horoscopes</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="compatibility.html" class="nav-link">Compatibility Test</a>
+                <a href="newsletter.html" class="nav-link">Newsletter</a>
+                <a href="signup.html" class="nav-link highlighted">Login</a>
+            </div>
+        </nav>
+    </header>
+
+     <!-- Hero Section -->
+     <section class="hero">
+        <div style="text-align: center; padding: 50px; background: rgba(0, 0, 0, 0.6);">
+            <h1 style="color: #ffc107; font-size: 2.5rem;">Explore the wonders of the moon and stars</h1>
+            <p style="color: #f5f5f5;">Welcome to the celestial sanctuary where the mysteries of the moon and the energy of the stars come alive. Here, we explore the lunar phases and their profound influence on our inner and outer worlds. Let the rhythms of the cosmos guide your journey, as you align with the magic of the universe and uncover the wisdom written in the stars.</p>
+        </div>
+    </section>
+
+    <!-- Content Sections -->
+    <div class="section-container">
+        <div class="section-text">
+            <h2>Understanding Lunar Phases</h2>
+            <p class="short-description">Explore how the different phases of the moon influence your emotions and spiritual journey.</p>
+            <button class="btn btn-primary" onclick="openModal('lunarModal')">Learn More</button>
+        </div>
+        <div class="section-image">
+            <img src="images/lunar.png" alt="Understanding Lunar Phases">
+        </div>
+    </div>
+
+    <div class="section-container reverse">
+        <div class="section-image">
+            <img src="images/zodiac.png" alt="The Moon and Zodiac Signs">
+        </div>
+        <div class="section-text">
+            <h2>The Moon and Zodiac Signs</h2>
+            <p class="short-description">See how the moon influences each zodiac sign and shapes your personality traits.</p>
+            <button class="btn btn-primary" onclick="openModal('zodiacModal')">Learn More</button>
+        </div>
+    </div>
+
+    <div class="section-container">
+        <div class="section-text">
+            <h2>Harnessing Lunar Energy</h2>
+            <p class="short-description">Learn how to channel the moon’s energy for growth, healing, and transformation.</p>
+            <button class="btn btn-primary" onclick="openModal('energyModal')">Learn More</button>
+        </div>
+        <div class="section-image">
+            <img src="images/energy.png" alt="Harnessing Lunar Energy">
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="lunarModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('lunarModal')">&times;</span>
+            <h2>Understanding Lunar Phases</h2>
+            <p>The moon's journey through its phases—New Moon, Waxing Crescent, First Quarter, Waxing Gibbous, Full Moon, Waning Gibbous, Last Quarter, and Waning Crescent—brings distinct energies that shape our experiences and emotions. The New Moon invites introspection and fresh starts, encouraging us to set intentions and plant seeds for future growth. The Waxing Moon phases, including the Waxing Crescent and Waxing Gibbous, symbolize expansion and action as we work toward our goals. The Full Moon, with its powerful illumination, represents peak energy, clarity, and the culmination of efforts. As the moon begins to wane, the Waning Gibbous, Last Quarter, and Waning Crescent phases invite reflection, release, and rest, helping us let go of negativity and prepare for the next cycle. Aligning with these natural rhythms fosters emotional balance and spiritual harmony, connecting us to the universe's cosmic flow.</p>
+        </div>
+    </div>
+
+    <div id="zodiacModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('zodiacModal')">&times;</span>
+            <h2>The Moon and Zodiac Signs</h2>
+            <p>The interplay between the moon and the zodiac creates a dynamic that influences how we process emotions, make decisions, and connect with others. For fire signs (Aries, Leo, Sagittarius), the Full Moon amplifies passion, courage, and creativity, inspiring bold action and transformative moments. Earth signs (Taurus, Virgo, Capricorn) thrive during the Waxing Crescent, finding stability, practicality, and a grounded connection to their ambitions. The air signs (Gemini, Libra, Aquarius) experience heightened communication, intellect, and social connection during the First Quarter, while water signs (Cancer, Scorpio, Pisces) feel most attuned to their intuition and emotions during the Waning Moon phases. Each phase's alignment with a zodiac sign reveals patterns and behaviors, offering insights into our personal and collective journeys through the lens of astrology.</p>
+        </div>
+    </div>
+
+    <div id="energyModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('energyModal')">&times;</span>
+            <h2>Harnessing Lunar Energy</h2>
+            <p>The moon's phases offer a blueprint for transformation, healing, and personal growth. During the New Moon, the darkness invites us to set intentions, visualize dreams, and create a roadmap for the future. As the moon waxes, its growing light encourages action, momentum, and steady progress toward our goals. The Full Moon, a time of abundance and celebration, shines a spotlight on achievements, helping us recognize our progress and embrace gratitude. As the moon wanes, its diminishing light provides an opportunity to release what no longer serves us—be it emotional baggage, unhealthy habits, or limiting beliefs. By aligning with these phases, we can harness the moon's energy as a tool for continuous growth and renewal, creating a life that's in sync with the universe's rhythms.</p>
+        </div>
+    </div>
+
+    <footer> <p>&copy; 2025 Cosmic Compass. All Rights Reserved.</p> 
+        <!-- Adding the Social Media Icons --> 
+         <img src="images/icons.png" alt="Social Media Icons" class="footer-icons"> </footer>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            document.querySelectorAll('.modal').forEach(modal => {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            });
+        };
+    </script>
 </body>
+</html>
