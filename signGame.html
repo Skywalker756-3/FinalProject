@@ -1,52 +1,117 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zodiac and Planet Matching Game</title>
+    <link rel="stylesheet" href="signStyles.css">
 </head>
 <body>
-    <!--Matching Game-->
-    <div class="game-container">
-        <h1>Celestial Connections: Match the Rulers of the Zodiac</h1>
-        <p>Drag the zodiac symbols to their corresponding ruling planets!</p>
-      
-        <div class="game-board">
-          <!-- Zodiac Symbols -->
-          <div class="zodiac-container">
-            <h2>Zodiac Signs</h2>
-            <div class="zodiac-grid">
-              <div class="zodiac-item" draggable="true" id="aries">♈ Aries</div>
-              <div class="zodiac-item" draggable="true" id="taurus">♉ Taurus</div>
-              <div class="zodiac-item" draggable="true" id="gemini">♊ Gemini</div>
-              <div class="zodiac-item" draggable="true" id="cancer">♋ Cancer</div>
-              <div class="zodiac-item" draggable="true" id="leo">♌ Leo</div>
-              <div class="zodiac-item" draggable="true" id="virgo">♍ Virgo</div>
-              <div class="zodiac-item" draggable="true" id="libra">♎ Libra</div>
-              <div class="zodiac-item" draggable="true" id="scorpio">♏ Scorpio</div>
-              <div class="zodiac-item" draggable="true" id="sagittarius">♐ Sagittarius</div>
-              <div class="zodiac-item" draggable="true" id="capricorn">♑ Capricorn</div>
-              <div class="zodiac-item" draggable="true" id="aquarius">♒ Aquarius</div>
-              <div class="zodiac-item" draggable="true" id="pisces">♓ Pisces</div>
-            </div>
-          </div>
-      
-          <!-- Planets -->
-          <div class="planet-container">
-            <h2>Planets</h2>
-            <div class="planet-item" id="mars">Mars</div>
-            <div class="planet-item" id="venus">Venus</div>
-            <div class="planet-item" id="mercury">Mercury</div>
-            <div class="planet-item" id="moon">Moon</div>
-            <div class="planet-item" id="sun">Sun</div>
-            <div class="planet-item" id="jupiter">Jupiter</div>
-            <div class="planet-item" id="saturn">Saturn</div>
-            <div class="planet-item" id="uranus">Uranus</div>
-            <div class="planet-item" id="neptune">Neptune</div>
-            <div class="planet-item" id="pluto">Pluto</div>
-          </div>
+    <nav>
+        <div class="navigationBar">
+            <a class="navigationButton" href = ./home.html style="text-align: left;">
+                <div>
+                    Cosmic Compass
+                </div>
+            </a>
+            <a class="navigationButton" href= "./horoscopes.html">
+                <div>
+                    Horoscopes
+                </div>
+            </a>
+            <a class="navigationButton" href= "./blog.html">
+                <div>
+                    Blog
+                </div>
+            </a>
+            <a class="navigationButton" href="./compatibility.html">
+                <div>
+                    Compatibility Test
+                </div>
+            </a>
+            <a class="navigationButton" href="./newsletter.html">
+                <div>
+                    Newsletter
+                </div>
+            </a>
+            <a class="navigationButton">
+                <div class="highlightedButton">
+                    Login 
+                </div>
+            </a>
         </div>
-      
-        <button id="check-results">Check Results</button>
-        <div id="result"></div>
-      </div>
-      
-      <script src="script.js"></script>
+    </nav>
+    
+    
+
+    
+    
+    <h1 class = "center-game-title">Zodiac and Planet Matching Game</h1>
+    <p class = "center-game-subtitle">Drag the zodiac symbols to their corresponding ruling planets!</p>
+    <div class="game-container">
+        <div class="zodiac-container" id="zodiacContainer"></div>
+        <div class="planet-container" id="planetContainer"></div>
+    </div>
+    <button id="submitBtn" onclick="checkMatches()">Submit</button>
+    <div id="result" class="result"></div>
+    <button id="playAgainBtn" class="hidden" onclick="resetGame()">Play Again</button>
+
+
+
+
+
+    <div class = "compatibility-container">
+        <h2 class="center-game-title">Zodiac Compatibility Test</h2>
+        <div class="compatibility-selection">
+            <select id="zodiac1">
+                <option value="">Select First Zodiac Sign</option>
+                <option value="aries">Aries</option>
+                <option value="taurus">Taurus</option>
+                <option value="gemini">Gemini</option>
+                <option value="cancer">Cancer</option>
+                <option value="leo">Leo</option>
+                <option value="virgo">Virgo</option>
+                <option value="libra">Libra</option>
+                <option value="scorpio">Scorpio</option>
+                <option value="sagittarius">Sagittarius</option>
+                <option value="capricorn">Capricorn</option>
+                <option value="aquarius">Aquarius</option>
+                <option value="pisces">Pisces</option>
+            </select>
+
+
+
+            <button id="checkCompatibilityBtn">Check Compatibility</button>
+
+
+
+            <select id="zodiac2">
+                <option value="">Select Second Zodiac Sign</option>
+                <option value="aries">Aries</option>
+                <option value="taurus">Taurus</option>
+                <option value="gemini">Gemini</option>
+                <option value="cancer">Cancer</option>
+                <option value="leo">Leo</option>
+                <option value="virgo">Virgo</option>
+                <option value="libra">Libra</option>
+                <option value="scorpio">Scorpio</option>
+                <option value="sagittarius">Sagittarius</option>
+                <option value="capricorn">Capricorn</option>
+                <option value="aquarius">Aquarius</option>
+                <option value="pisces">Pisces</option>
+            </select>
+        </div>
+    
+        <div class="compatibility-result">
+            <div id="zodiac1Image" class="zodiac-compatibility-image"></div>
+            <div class="heart">❤️</div>
+            <div id="zodiac2Image" class="zodiac-compatibility-image"></div>
+        </div>
+    
+        <div id="compatibilityPercentage" class="result-percent"></div>
+        <button id="findMoreCompatibilityBtn" class="hidden" onclick="resetCompatibility()">Find More Compatibility</button>
+    </div>
+
+    <script src="signGame.js"></script>
 </body>
+</html>
