@@ -45,6 +45,109 @@ video {
 
 
 
+/*for the buttons*/
+.styled-button {
+  margin-right: 10px; /* Space between buttons */
+  padding: 10px 20px; /* Button padding */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #d5b76c; /* Button background color */
+  color: #010533; /* Button text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.styled-button:hover {
+  background-color: #ffffff; /* Change background on hover */
+}
+
+
+
+
+
+.game-button{
+  display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    margin-top: 20px; /* Optional: Add some space above the button */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*THIS IS FOR THE HEADING THING*/
+.info-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1); /* Optional: Add a background color */
+  border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+.info-content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px; /* Optional: Set a max width */
+  height: 600px;
+  width: 100%;
+}
+
+.info-image {
+  width: 600px; /* Adjust the size as needed */
+  height: 400px; /* Maintain aspect ratio */
+  margin-right: 20px; /* Space between image and text */
+}
+
+.info-text {
+  color: #fff; /* Text color */
+  max-width: 600px; /* Optional: Set a max width for text */
+}
+
+.button-container {
+  margin-top: 20px; /* Space above buttons */
+}
+
+.button-container button {
+  margin-right: 10px; /* Space between buttons */
+  padding: 10px 20px; /* Button padding */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #d5b76c; /* Button background color */
+  color: #010533; /* Button text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.button-container button:hover {
+  background-color: #ffffff; /* Change background on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*THIS IS FOR THE DRAG AND DROP GAME*/
@@ -101,7 +204,7 @@ video {
 .center-game-title {
   text-align: center;
   margin: 0;
-  margin-top: 100px;
+  margin-top: 250px;
   padding: 10px 0;
   color: #d5b76c;
 }
@@ -112,6 +215,17 @@ video {
   padding: 10px 0;
   color: #fff;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -149,8 +263,9 @@ video {
 }
 
 .heart {
-  font-size: 50px;
-  margin: 0 20px;
+  font-size: 100px;
+  margin: center;
+  margin-bottom: 100px;
 }
 
 .result-percent {
@@ -160,7 +275,14 @@ video {
   color: #d5b76c;
 }
 
-
+.compatibility-description {
+  font-size: 16px;
+    color: #fff;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+    line-height: 1.5;
+}
 
 
 
