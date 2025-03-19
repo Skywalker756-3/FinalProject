@@ -37,73 +37,72 @@
             </a>
         </div>
     </nav>
+    <!--CSS Grid Wrapper for page-->
     <div class="pageWrapper">
-        <div class="titleWithCard">
+        <div class="titleWithSubtitle">
             <div>
                 <h1 class="majorTitle">Daily Horoscopes</h1>
                 <h2>Choose your Sign</h2>
             </div>
             <div class="signSelector">
                 <div>
-                    <img src="/images/buttons/Aquarius.png" alt="Click to choose Aquarius, January 20 to February 18" onclick="setSign('Aquarius')">
+                    <img class="signChangeButton" src="/images/buttons/Aquarius.png" alt="Click to choose Aquarius, January 20 to February 18" onclick="setSign('Aquarius')">
                 </div>
                 <div>
-                    <img src="/images/buttons/Pisces.png" alt="Click to choose Pisces, February 19 to March 20" onclick="setSign('Pisces')">
+                    <img class="signChangeButton" src="/images/buttons/Pisces.png" alt="Click to choose Pisces, February 19 to March 20" onclick="setSign('Pisces')">
                 </div>
                 <div>
-                    <img src="/images/buttons/Aries.png" alt="Click to choose Aries, March 21 to April 19 " onclick="setSign('Aries')">
+                    <img class="signChangeButton" src="/images/buttons/Aries.png" alt="Click to choose Aries, March 21 to April 19 " onclick="setSign('Aries')">
                 </div>
                 <div>
-                    <img src="/images/buttons/Taurus.png" alt="Click to choose Taurus, April 20 to May 20" onclick="setSign('Taurus')">
+                    <img class="signChangeButton" src="/images/buttons/Taurus.png" alt="Click to choose Taurus, April 20 to May 20" onclick="setSign('Taurus')">
                 </div>
                 <div>
-                    <img src="/images/buttons/Gemini.png" alt="Click to choose Gemini, May 21 to June 20" onclick="setSign('Gemini')">
+                    <img class="signChangeButton" src="/images/buttons/Gemini.png" alt="Click to choose Gemini, May 21 to June 20" onclick="setSign('Gemini')">
                 </div>
                 <div>
-                    <img src="/images/buttons/Cancer.png" alt="Click to choose Cancer, June 21 to Jule 22" onclick="setSign('Cancer')">
+                    <img class="signChangeButton" src="/images/buttons/Cancer.png" alt="Click to choose Cancer, June 21 to Jule 22" onclick="setSign('Cancer')">
                 </div>
                 <div>
-                    <img src="/images/buttons/Leo.png" alt="Click to choose Leo, July 23 to August 22" onclick="setSign('Leo')">
+                    <img class="signChangeButton" src="/images/buttons/Leo.png" alt="Click to choose Leo, July 23 to August 22" onclick="setSign('Leo')">
                 </div>
                 <div>
-                    <img src="/images/buttons/Virgo.png" alt="Click to choose Virgo, August 23 to September 22" onclick="setSign('Virgo')">
+                    <img class="signChangeButton" src="/images/buttons/Virgo.png" alt="Click to choose Virgo, August 23 to September 22" onclick="setSign('Virgo')">
                 </div>
                 <div>
-                    <img src="/images/buttons/Libra.png" alt="Click to choose Libra, September 23 to Oct 22" onclick="setSign('Libra')">
+                    <img class="signChangeButton" src="/images/buttons/Libra.png" alt="Click to choose Libra, September 23 to Oct 22" onclick="setSign('Libra')">
                 </div>
                 <div>
-                    <img src="/images/buttons/Scorpio.png" alt="Click to choose Scorpio, October 23 to November 21" onclick="setSign('Scorpio')">
+                    <img class="signChangeButton" src="/images/buttons/Scorpio.png" alt="Click to choose Scorpio, October 23 to November 21" onclick="setSign('Scorpio')">
                 </div>
                 <div>
-                    <img src="/images/buttons/Sagittarius.png" alt="Click to choose Sagittarius, November 22 to December 21" onclick="setSign('Sagittarius')">
+                    <img class="signChangeButton" src="/images/buttons/Sagittarius.png" alt="Click to choose Sagittarius, November 22 to December 21" onclick="setSign('Sagittarius')">
                 </div>
                 <div>
-                    <img src="/images/buttons/Capricorn.png" alt="Click to choose Capricorn, December 22 to January 19" onclick="setSign('Capricorn');">
+                    <img class="signChangeButton" src="/images/buttons/Capricorn.png" alt="Click to choose Capricorn, December 22 to January 19" onclick="setSign('Capricorn');">
                 </div>
             </div>
         </div>
-        <p>
-            Mar 4, 2025 - You could complete some personal projects that involve
-            a lot of paperwork today, Aries. This could increase your income 
-            considerably. Past success that has become known in your field could
-            lead to opportunities for future success. This may be job related, but it
-            may also involve your own projects. All signs indicate that success,
-            good fortune, and advancement are in the wind for you 
-        </p>
-        <div class="doubleColumn" id="horoscope">
-            <div class="minorTitle" id="CurrentSign">
-                Your Constilation
+        <div class="horoscope">
+            <div class="majorTitle" id="CurrentSign">
+                Constilation
             </div>
             <div style="background-image:images\horoscopes\constillation;">
                 <img src="./images/horoscopes/constillation.png" alt="An image of a constilation" class="imageMedium">
             </div>
-            <div class="minorTitle">
-                Personality Traits
-            </div>
-            <div>
-                <img src="./images/horoscopes/piscesPerson.png" alt="An image of a constilation" class="imageMedium">
-            </div>
         </div>
     </div>
 </body>
+        <!-- Footer Section -->
+        <footer id="footer">
+            <div class="footer-container">
+                <div class="footer-links">
+                    <a href="horoscopes.html">Horoscopes</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="compatibility.html">Compatibility Test</a>
+                    <a href="newsletter.html">Newsletter</a>
+                </div>
+                <p>&copy; 2025 Cosmic Compass. All Rights Reserved.</p>
+            </div>
+        </footer>
 <script src="script.js"></script>
