@@ -79,7 +79,6 @@ Horoscope Page Exclusive
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Enhanced hover shadow */
         transform: scale(1.05)
 }
-
 .pageWrapper{
     display:grid;
     gap:3%;
@@ -98,11 +97,21 @@ Horoscope Page Exclusive
   justify-content: center;
   margin-bottom: 12%;
 }
-.suggestions >div{
-  background-color: red;
+.suggestions >a{
+  background-color: #000229;
+  color: #CBB067 ;
   padding: 2%;
   text-align: center;
   box-sizing: border-box;
+  text-decoration: none;
+  cursor: pointer;
+  margin-bottom: 100%;
+  margin-top: 5%;
+}
+.suggestions>a:hover{
+  background: rgba(10, 10, 60, 0.8); /* Darker hover effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Enhanced hover shadow */
+  transform: scale(1.05)
 }
 /*
 RETIRED

@@ -141,14 +141,15 @@ function setSign(sign)
 function SignDisplay()
 {
   //This function changes the inner text of an element to match the user's current sign
-  sign = getSign()
-  if(sign!=null)
+  let sign = getSign()
+  let elements= document.getElementsByClassName("CurrentSign")
+  if(sign==null)
   {
-    document.getElementById("CurrentSign").innerText=sign
+    sign=""
   }
-  else
+  for(let i=0;i<elements.length;i++)
   {
-    document.getElementById("CurrentSign").innerText=""
+    elements.item(i).innerText=sign
   }
 }
 setInterval(SignDisplay,100)

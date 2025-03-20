@@ -21,7 +21,7 @@
                     Blog
                 </div>
             </a>
-            <a class="navigationButton" href="./compatibility.html">
+            <a class="navigationButton" onclick="navigateTo('./compatibility.html')">
                 <div>
                     Compatibility Test
                 </div>
@@ -86,7 +86,7 @@
         </div>
         <div class="horoscope">
             <div class="horoscopeCol1">
-                <div class="majorTitle" id="CurrentSign" style="margin-top: -12%;">
+                <div class="majorTitle CurrentSign" style="margin-top: -12%;">
                     Choose Sign
                 </div>
                 <div>
@@ -98,15 +98,15 @@
             </div>
         </div>
         <div class="suggestions">
-            <div>
-                <div></div> Compatibilty
-            </div>
-            <div>
-                Leo Blogs
-            </div>
-            <div>
+            <a href = "./compatibility.html">
+                <div class="CurrentSign buttonTheme"></div> Compatibilty
+            </a>
+            <a href = "./blog.html">
+                <div class="CurrentSign buttonTheme"></div> Blogs
+            </a>
+            <a href="./newsletter.html" class="buttonTheme">
                 Newsletter
-            </div>
+            </a>
         </div>
     </div>
 </body>
