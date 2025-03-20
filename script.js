@@ -13,7 +13,11 @@ function SignDisplay()
   document.getElementById("CurrentSign").innerText=getSign()
 }
 setInterval(SignDisplay,100)
-addEventListener("click",document.getElementsByClassName,)
+function signUpdateHandler(event)
+{
+  document.getElementsByClassName("signChangeButton")
+}
+addEventListener("click",signUpdateHandler)
 function hasSignTempStorage()
 {
   /* HELPER FUNCTION

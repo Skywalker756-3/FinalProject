@@ -92,7 +92,7 @@ video {
 /*Signs that are used as buttons*/
 .signSelector > div {
     background-color: #000229;
-    min-width: 140px
+    max-width: 200px
 }
 .signChangeButton {
     /*This is used in JS to update the sign whenever anything with this class is clicked*/
