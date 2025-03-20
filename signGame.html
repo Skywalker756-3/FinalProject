@@ -46,22 +46,66 @@
 
     
     
+    
+    <div class="info-section">
+        <div class="info-content">
+            <img src="images/zodiac/astrology.png" alt="Zodiac Compatibility" class="info-image">
+            <div class="info-text">
+                <h2>Check Your Compatibility</h2>
+                <p>This is where you can check your compatibility with other zodiac signs and test your knowledge on the corresponding planets. Discover how well you match with your partner and learn more about the celestial influences in your life!</p>
+                <div class="button-container">
+                    <button class="styled-button" onclick="scrollToSection('compTest');">Come Check Your Compatibility</button>
+                    <button class="styled-button" onclick="scrollToSection('mGame');">Test Your Knowledge</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <h1 class = "center-game-title">Zodiac and Planet Matching Game</h1>
     <p class = "center-game-subtitle">Drag the zodiac symbols to their corresponding ruling planets!</p>
-    <div class="game-container">
+    <div class="game-container" id="mGame">
         <div class="zodiac-container" id="zodiacContainer"></div>
         <div class="planet-container" id="planetContainer"></div>
     </div>
-    <button id="submitBtn" onclick="checkMatches()">Submit</button>
+    
     <div id="result" class="result"></div>
-    <button id="playAgainBtn" class="hidden" onclick="resetGame()">Play Again</button>
+    
+    <div class="game-button">        
+        <button id="submitBtn" class="styled-button" onclick="checkMatches()">Submit</button>
+        <button id="playAgainBtn" class="styled-button hidden" onclick="resetGame()">Play Again</button>
+    </div>
 
 
 
+    <div class = "compatibility-container" id="compTest">
+        <h1 class="center-game-title">Zodiac Compatibility Test</h1>
+        <p class="center-game-subtitle">Select 2 zodiac signs to learn more about their compatibility!</p>
 
-
-    <div class = "compatibility-container">
-        <h2 class="center-game-title">Zodiac Compatibility Test</h2>
         <div class="compatibility-selection">
             <select id="zodiac1">
                 <option value="">Select First Zodiac Sign</option>
@@ -81,7 +125,7 @@
 
 
 
-            <button id="checkCompatibilityBtn">Check Compatibility</button>
+            <button id="checkCompatibilityBtn" class="styled-button">Check Compatibility</button>
 
 
 
@@ -109,7 +153,8 @@
         </div>
     
         <div id="compatibilityPercentage" class="result-percent"></div>
-        <button id="findMoreCompatibilityBtn" class="hidden" onclick="resetCompatibility()">Find More Compatibility</button>
+        <div id="compatibilityDescription" class="compatibility-description"></div>
+        <button id="findMoreCompatibilityBtn" class="styled-button hidden" onclick="resetCompatibility()">Find More Compatibility</button>
     </div>
 
     <script src="signGame.js"></script>
