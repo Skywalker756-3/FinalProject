@@ -43,7 +43,6 @@ Horoscope Page Exclusive
 .horoscope{
     display: flex;
     flex-direction: row;
-    margin-top: 4%;
     margin-left: 15%;
     margin-right: 15%;
     column-gap: 10%;
@@ -51,7 +50,11 @@ Horoscope Page Exclusive
 }
 .horoscopeCol1{
   justify-items: baseline;
-  flex: 2 250px
+  flex: 2 250px;
+  min-width: 250px;
+}
+.horoscopeCol2{
+  padding-top: 8%;
 }
 .titleWihSubtitle{
     display: grid;
