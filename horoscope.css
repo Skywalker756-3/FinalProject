@@ -47,7 +47,6 @@ Horoscope Page Exclusive
     margin-left: 15%;
     margin-right: 15%;
     column-gap: 10%;
-    margin-bottom: 15%;
     justify-items: center;
 }
 .horoscopeCol1{
@@ -89,6 +88,21 @@ Horoscope Page Exclusive
     padding-right: 15%;
     justify-content: center;
     background-image: url(images/screen3_stars1.png);
+    grid-template-rows: auto;
+}
+.suggestions{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5%;
+  flex-grow: 2;
+  justify-content: center;
+  margin-bottom: 12%;
+}
+.suggestions >div{
+  background-color: red;
+  padding: 2%;
+  text-align: center;
+  box-sizing: border-box;
 }
 /*
 RETIRED

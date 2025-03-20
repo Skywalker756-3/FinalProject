@@ -59,7 +59,6 @@ addEventListener("click",horoscopeSwapper,)
 /*
 Sign management
 */
-setInterval(SignDisplay,100)
 function signUpdateHandler(event)
 {
   document.getElementsByClassName("signChangeButton")
@@ -149,6 +148,7 @@ function SignDisplay()
   }
   else
   {
-    document.getElementById("CurrentSign").innerText="Sign unknown"
+    document.getElementById("CurrentSign").innerText=""
   }
 }
+setInterval(SignDisplay,100)
