@@ -4,8 +4,61 @@ function navigateTo(url) {
     window.location.href = url; // Redirects to the specified URL
   }
 
-//Sign Storage and Retrieval
+//Horoscope Page
+function horoscopeSwapper()
+{
+  //getSign returns a astrology name or null
+  sign = getSign()
+  image ="src='./images/horoscopes/"+sign+".png' alt= An image of "+sign+" class='imageMedium'"
 
+  //switch statement to change the text of the horoscope
+  document.getElementById("horoscopeImage").innerHTML=image
+  switch(sign)
+  {
+    case "Aquarius":
+      document.getElementById("horoscopeText").innerText="Aquarius are known for"
+      break;
+    case "Aries":
+      document.getElementById("horoscopeText").innerText="Aries Text"
+      break;
+    case "Cancer":
+      document.getElementById("horoscopeText").innerText=""
+      break;
+    case "Capricorn":
+      document.getElementById("horoscopeText").innerText=""
+      break;
+    case "Gemini":
+      document.getElementById("horoscopeText").innerText=""
+      break;
+    case "Leo":
+      document.getElementById("horoscopeText").innerText=""
+      break;
+    case "Libra":
+      document.getElementById("horoscopeText").innerText=""
+      break;
+    case "Pisces":
+      document.getElementById("horoscopeText").innerText=""
+      break;
+    case "Sagittarius":
+      document.getElementById("horoscopeText").innerText=""
+      break;
+    case "Scorpio":
+      document.getElementById("horoscopeText").innerText=""
+      break;
+    case "Taurus":
+      document.getElementById("horoscopeText").innerText=""
+      break;
+    case "Virgo":
+      document.getElementById("horoscopeText").innerText=""
+      break;
+    default:
+      break;
+
+  }
+}
+addEventListener("DOMContentLoaded",horoscopeSwapper)
+
+//Sign Storage and Retrieval
 function SignDisplay()
 {
   //This is a temporary function to adjust the text of elements with the class "CurrentSign"
@@ -70,15 +123,13 @@ function getSign()
  let signLocation = hasSign()
  switch(signLocation)
  {
-  case 0:
+  case 0: //sign not found
     return null;
-  case 1:
+  case 1: //Sign in webstorage
     return localStorage.getItem("CosmicCompass:sign")
-    //This returns a string type!
-    //But it's okay because javascript doesn't do type checking
-  case 2:
-    //Access database
-  default:
+  case 2: //Sign in account
+
+  default: //something unintended happened
     return null
  }
 }
