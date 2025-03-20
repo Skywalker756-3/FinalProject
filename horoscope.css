@@ -48,8 +48,18 @@ Horoscope Page Exclusive
     column-gap: 10%;
     justify-items: center;
 }
+@media (max-width: 1250px) {
+  .horoscope{
+    flex-direction: column;
+}
+.imageCenter{
+  justify-items: center;
+  padding-left: 25%;
+}
+}
+
 .horoscopeCol1{
-  justify-items: baseline;
+  justify-items: center;
   flex: 2 250px;
   min-width: 250px;
 }
