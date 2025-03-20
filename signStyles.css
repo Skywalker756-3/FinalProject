@@ -89,46 +89,46 @@ video {
   justify-content: center;
   margin: 40px 0;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.1); /* Optional: Add a background color */
-  border-radius: 10px; /* Optional: Add rounded corners */
+  background-color: rgba(255, 255, 255, 0.1); 
+  border-radius: 10px; 
 }
 
 .info-content {
   display: flex;
   align-items: center;
-  max-width: 1200px; /* Optional: Set a max width */
+  max-width: 1200px; 
   height: 600px;
   width: 100%;
 }
 
 .info-image {
-  width: 600px; /* Adjust the size as needed */
-  height: 400px; /* Maintain aspect ratio */
-  margin-right: 20px; /* Space between image and text */
+  width: 600px; 
+  height: 400px; 
+  margin-right: 20px; 
 }
 
 .info-text {
-  color: #fff; /* Text color */
-  max-width: 600px; /* Optional: Set a max width for text */
+  color: #fff; 
+  max-width: 600px; 
 }
 
 .button-container {
-  margin-top: 20px; /* Space above buttons */
+  margin-top: 20px; 
 }
 
 .button-container button {
-  margin-right: 10px; /* Space between buttons */
-  padding: 10px 20px; /* Button padding */
-  border: none; /* Remove default border */
-  border-radius: 5px; /* Rounded corners */
-  background-color: #d5b76c; /* Button background color */
-  color: #010533; /* Button text color */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background-color 0.3s; /* Smooth transition */
+  margin-right: 10px; 
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 5px; 
+  background-color: #d5b76c; 
+  color: #010533; 
+  cursor: pointer; 
+  transition: background-color 0.3s; 
 }
 
 .button-container button:hover {
-  background-color: #ffffff; /* Change background on hover */
+  background-color: #ffffff; 
 }
 
 
@@ -138,10 +138,20 @@ video {
 
 
 
+/*THIS IS FOR THE PAGE SPLITTER PICTURES*/
+.border-image {
+  width: 100%; 
+  height: auto; 
+  display: block;
+  margin: 20px 0; 
+}
 
-
-
-
+.border-image1 {
+  width: 100%; 
+  height: auto; 
+  display: block; 
+  margin: 100px 0; 
+}
 
 
 
@@ -237,6 +247,7 @@ video {
 
 /*THIS IS FOR THE COMPATIBILITY TEST*/
 .compatibility-container {
+  padding: -100px;
   margin: 40px auto;
   text-align: center;
 }
@@ -290,7 +301,47 @@ video {
 
 
 
+/*Mahnoor's Footer Styling*/
+/* Footer Styling */
+#footer {
+  background-color: rgba(255, 255, 255, 0.1); /* Transparent white background */
+  color: #ffffff; /* Text color */
+  text-align: center; /* Center align text */
+  padding: 20px 0; /* Spacing for the footer */
+  border-top: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border on top */
+}
 
+.footer-container {
+  max-width: 1200px; /* Constrain the width */
+  margin: 0 auto; /* Center the content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* Space between elements */
+}
+
+.footer-links {
+  display: flex;
+  gap: 15px; /* Space between links */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.footer-links a {
+  color: #ffffff; /* White text color for links */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make the links bold */
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.footer-links a:hover {
+  color: #ffd700; /* Change to gold on hover */
+}
+
+footer p {
+  font-size: 0.9rem; /* Smaller font for copyright text */
+  opacity: 0.8; /* Slightly transparent text */
+  margin-top: 10px;
+}
 
 
 
@@ -394,3 +445,73 @@ img{
     gap: 5px;
   }
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*THIS IS FOR THE NEWSLETTER PAGE*/
+.newscontent {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between the content and image */
+  align-items: center; /* Center items vertically */
+  margin: 40px auto; /* Center the section and add margin */
+  max-width: 1200px; /* Constrain the width */
+}
+
+.news-paragraph {
+  flex: 1; /* Allow the paragraph to take available space */
+  padding: 20px; /* Add some padding */
+  color: #fff; /* Text color */
+}
+
+.newsletter-image {
+  flex: 1; /* Allow the image to take available space */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center the image horizontally */
+  max-width: 100vw;
+  margin: auto;
+}
+
+.newsletter-image img {
+  max-width: 100%; /* Ensure the image is responsive */
+  height: auto; /* Maintain aspect ratio */
+  
+}
+
+.slider-container {
+  position: relative; /* Position relative for absolute positioning of slides */
+  max-width: 100%; /* Set max width for the slider */
+  margin: 0 auto; /* Center the slider */
+  overflow: hidden; /* Hide overflow */
+  max-height: 100%;
+}
+
+
+.slider {
+  display: flex; /* Use flexbox for horizontal layout */
+  transition: transform 1.5s ease; /* Smooth transition for sliding */
+  width: 400px; /* Set width to accommodate all slides */
+  height: 100%;
+}
+
+
+.slide {
+  min-width: 100%; /* Each slide takes full width of the container */
+  height: 500px; /* Set height for the slides */
+  object-fit: contain; /* Cover the area without distortion */
+}
+
+
+
