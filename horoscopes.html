@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <head>
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./horoscope.css">
 </head>
 <body>
@@ -84,11 +85,27 @@
             </div>
         </div>
         <div class="horoscope">
-            <div class="majorTitle" id="CurrentSign">
-                Constilation
+            <div class="horoscopeCol1">
+                <div class="majorTitle" id="CurrentSign" style="margin-top: -12%;">
+                    Choose Sign
+                </div>
+                <div>
+                    <img id=horoscopeImage src="./images/horoscopes/null.png" alt="An image of ">
+                </div>
             </div>
-            <div style="background-image:images\horoscopes\constillation;">
-                <img src="./images/horoscopes/constillation.png" alt="An image of a constilation" class="imageMedium">
+            <div class = horoscopeCol2 id="horoscopeText">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ratione labore repudiandae debitis ab esse non? Ipsum vero voluptates in voluptate voluptatibus provident mollitia, quod at vitae consectetur expedita minus.
+            </div>
+        </div>
+        <div class="suggestions">
+            <div>
+                <div></div> Compatibilty
+            </div>
+            <div>
+                Leo Blogs
+            </div>
+            <div>
+                Newsletter
             </div>
         </div>
     </div>
@@ -105,4 +122,4 @@
                 <p>&copy; 2025 Cosmic Compass. All Rights Reserved.</p>
             </div>
         </footer>
-<script src="script.js"></script>
+<script src="horoscopes.js"></script>

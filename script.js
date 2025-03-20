@@ -5,15 +5,35 @@ function navigateTo(url) {
   }
 
 //Sign Storage and Retrieval
+/*
+id of CurrentSign is used to replace the text of these elements with the user's current sign
+id
+*/
 
 function SignDisplay()
 {
-  //This is a temporary function to adjust the text of elements with the class "CurrentSign"
-  //to the current sign. It is error prone so only use it as a placeholder
-  document.getElementById("CurrentSign").innerText=getSign()
+  //This function changes the inner text of an element to match the user's current sign
+  let sign = getSign()
+  let elements = document.getElementsByClassName("CurrentSign")
+  if(sign==null|sign==undefined)
+  {
+    sign="Sign unknown"
+  }
+  for(let i=0;i<elements.length;i++)
+  {
+    elements[i].innerText=sign
+  }
 }
 setInterval(SignDisplay,100)
-addEventListener("click",document.getElementsByClassName,)
+function signUpdateHandler(event)
+{
+  document.getElementsByClassName("signChangeButton")
+}
+addEventListener("click",signUpdateHandler)
+
+
+
+//Sign management
 function hasSignTempStorage()
 {
   /* HELPER FUNCTION
@@ -21,6 +41,7 @@ function hasSignTempStorage()
   Webstorage API
   otherwise it returns 0
   */
+ 
   //Checks if the storage exists
   if(localStorage.getItem("CosmicCompass:sign")==null)
   {
@@ -36,7 +57,7 @@ function hasSignAccount()
   */
 
   //IMPLEMENT HERE
-  return 1
+  return 0
 }
 function hasSign()
 {
@@ -45,9 +66,10 @@ function hasSign()
   1 if the sign is in WebAPI storage
   2 if the sign is in account
   0 if the sign is not found
+  
+  Use the two helper functions to determine where the sign is.
+  Priority is given in this function to the webAPI storage, incase the user wanted to see other signs
   */
-
-  //Use the two helper functions to determine where the sign is.
   if(hasSignTempStorage()==1)
   {
     return 1
@@ -66,15 +88,13 @@ function getSign()
  let signLocation = hasSign()
  switch(signLocation)
  {
-  case 0:
+  case 0: //sign not found
     return null;
-  case 1:
+  case 1: //Sign in webstorage
     return localStorage.getItem("CosmicCompass:sign")
-    //This returns a string type!
-    //But it's okay because javascript doesn't do type checking
-  case 2:
-    //Access database
-  default:
+  case 2: //Sign in account
+
+  default: //something unintended happened
     return null
  }
 }

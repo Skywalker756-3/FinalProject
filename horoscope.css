@@ -22,6 +22,8 @@ video {
 }
 
 /*Classes*/
+
+/*Title and Navigation Bar*/
 .majorTitle{
     color: #CBB067;
     text-shadow:3vw;
@@ -34,44 +36,22 @@ video {
     text-align: center;
     margin: auto;
 }
-.navigationBar{
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;  
-  gap: .1%;
-  font-size: 20px;
-  text-align: center;
-  margin-top: 1%;
-  margin-left: 1%;
-  margin-right: 1%;
-  @media (min-width: 1200px) {
-      .navigationBar {
-        font-size: 4rem;
-      }
-    }
-}
-.navigationButton{
-    color:  whitesmoke;
-    text-decoration: none;
-    cursor: pointer;
-    padding: 3;
-    border-radius: 20px;
-}
-.navigationButton:hover{
-    color:  #00064c;
-    background-color: #ffffff;
-}
-.highlightedButton{
-    background-color: black;
-    color: yellow;
-    border-radius: 20px;
-}
+
+/*
+Horoscope Page Exclusive
+*/
 .horoscope{
-    display: inline-grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    margin-top: 4%;
     margin-left: 15%;
     margin-right: 15%;
-    gap: 2%;
+    column-gap: 10%;
+    justify-items: center;
+}
+.horoscopeCol1{
+  justify-items: baseline;
+  flex: 2 250px
 }
 .titleWihSubtitle{
     display: grid;
@@ -92,11 +72,7 @@ video {
 /*Signs that are used as buttons*/
 .signSelector > div {
     background-color: #000229;
-    min-width: 140px
-}
-.signChangeButton {
-    /*This is used in JS to update the sign whenever anything with this class is clicked*/
-    transform: scale(1);
+    max-width: 200px
 }
 .signSelector > div:hover {
         background: rgba(10, 10, 60, 0.8); /* Darker hover effect */
@@ -112,6 +88,21 @@ video {
     padding-right: 15%;
     justify-content: center;
     background-image: url(images/screen3_stars1.png);
+    grid-template-rows: auto;
+}
+.suggestions{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5%;
+  flex-grow: 2;
+  justify-content: center;
+  margin-bottom: 12%;
+}
+.suggestions >div{
+  background-color: red;
+  padding: 2%;
+  text-align: center;
+  box-sizing: border-box;
 }
 /*
 RETIRED
