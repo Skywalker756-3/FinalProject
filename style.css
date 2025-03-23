@@ -1,13 +1,15 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Merriweather:wght@300;400;700&display=swap');
+/* General Styling across all pages */
 /* Headings Styling */
-h1, h2, h3 {
+header {
   text-align: center;
-  font-family: 'Merriweather', serif; /* Elegant serif font */
-  color: #CBB067; /* Gold for headings */
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 body {
-    background-color: #030621;
+    background-color: #020416;
+    background-image: url("images/screen1_clouds.png");
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -34,40 +36,116 @@ video {
     text-align: center;
     margin: auto;
 }
-.navigationBar{
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;  
-  gap: .1%;
-  font-size: 20px;
-  text-align: center;
-  margin-top: 1%;
-  margin-left: 1%;
-  margin-right: 1%;
-  @media (min-width: 1200px) {
-      .navigationBar {
-        font-size: 4rem;
-      }
-    }
-}
+
 img{
     size:100%
 }
-.navigationButton{
-    color:  whitesmoke;
-    text-decoration: none;
-    cursor: pointer;
-    padding: 3;
-    border-radius: 20px;
+
+/* Navigation Bar */
+.navigationBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin: 1%;
+  text-align: center;
+  font-size: 20px;
+  gap: .1%;
 }
-.navigationButton:hover{
-    color:  #00064c;
-    background-color: #ffffff;
+
+.nav-logo {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
 }
-.highlightedButton{
-    background-color: black;
-    color: yellow;
-    border-radius: 20px;
+
+.nav-logo:hover {
+  color: #00064c;
+  background-color: #ffffff;
+  border-radius: 2%;
 }
+
+.nav-links {
+  display: flex;
+  gap: 1em;
+}
+
+.navigationButton {
+  color: whitesmoke;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: center;
+}
+
+.navigationButton:hover {
+  
+  background-color:  rgb(3, 3, 68);
+  color: white;
+}
+
+.highlightedButton {
+  color: #00064c;
+  background-color: #ffffff;
+  font-weight: bold;
+  border-radius: 30px;
+}
+
+/* Hamburger Button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: whitesmoke;
+  transition: 0.3s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      background-color: #020416;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding: 1em 0;
+  }
+
+  .navigationBar {
+      flex-wrap: wrap;
+  }
+
+  .hamburger {
+      display: flex;
+  }
+
+  .nav-links.active {
+      display: flex;
+  }
+
+  .navigationButton {
+      text-align: center;
+      width: 100%;
+  }
+}
+
+
 .doubleColumn{
     display: inline-grid;
     grid-template-columns: 1fr 1fr;
@@ -85,10 +163,50 @@ img{
     object-fit: contain;
 }
 
+/* Footer Styling */
+#footer {
+  background-color: rgba(255, 255, 255, 0.1); /* Transparent white background */
+  color: #ffffff; /* Text color */
+  text-align: center; /* Center align text */
+  padding: 20px 0; /* Spacing for the footer */
+  border-top: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border on top */
+}
+
+.footer-container {
+  max-width: 1200px; /* Constrain the width */
+  margin: 0 auto; /* Center the content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* Space between elements */
+}
+
+.footer-links {
+  display: flex;
+  gap: 15px; /* Space between links */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.footer-links a {
+  color: #ffffff; /* White text color for links */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make the links bold */
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.footer-links a:hover {
+  color: #ffd700; /* Change to gold on hover */
+}
+
+footer p {
+  font-size: 0.9rem; /* Smaller font for copyright text */
+  opacity: 0.8; /* Slightly transparent text */
+  margin-top: 10px;
+}
+
 /* Home Page Style */
 /* Section 1 - Interactive Horoscope */
 #zodiac-section {
-  background-image: url("images/section1bg.jpg");
   background-size: cover; /* Ensures the image fills the container */
   background-repeat: no-repeat; /* Prevents tiling */
   background-position: center; /* Centers the image */
@@ -97,15 +215,123 @@ img{
   height: auto; /* Dynamically adjusts based on the aspect ratio */
   display: flex;
   position: relative; /* Ensures positioned children (like #hover-text) align correctly */
+  background-image: url(images/screen3_stars1.png);
 }
 
+/* Instructions */
+#instructions {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #f9f9f9;
+  background: rgba(245, 245, 245, 0.2);
+  padding: 10px 20px;
+  border-radius: 8px;
+  z-index: 10;
+  pointer-events: none;
+  font-size: 100%;
+}
+
+/* Zodiac Signs Styling */
+.zodiac-sign {
+  position: absolute;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  border-radius: 50%;
+  line-height: 80px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.zodiac-sign:hover {
+  transform: scale(1.2);
+  color: #ffffff;
+}
+
+/* Horoscope Display */
+#horoscope-display {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  text-align: center;
+  background: rgba(245, 245, 245, 0.2);
+  padding: 15px 25px;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 100%;
+}
+
+/* Realistic and Spread-Out Constellation Placement */
+#Aries {
+  top: 0%; /* Mid-level, near the center */
+  left: 3%; /* Slightly left */
+}
+
+#Taurus {
+  top: 10%; /* Near Aries */
+  left: 20%; /* Slightly to the right of Aries */
+}
+
+#Gemini {
+  top: 7%; /* Higher in the sky */
+  left: 40%; /* Near the top center */
+}
+
+#Cancer {
+  top: 15%; /* Just below Gemini */
+  left: 55%; /* More central */
+}
+
+#Leo {
+  top: 5%; /* Mid-level */
+  left: 75%; /* Central */
+}
+
+#Virgo {
+  top: 25%; /* Slightly lower */
+  left: 75%; /* Slightly right of center */
+}
+
+#Libra {
+  top: 48%; /* Below Virgo */
+  left: 78%; /* Mid-right */
+}
+
+#Scorpio {
+  top: 60%; /* Near the bottom */
+  left: 60%; /* Further right */
+}
+
+#Sagittarius {
+  top: 60%; /* Lower and to the right */
+  left: 40%; /* Bottom-right corner */
+}
+
+#Capricorn {
+  top: 65%; /* Below Sagittarius */
+  left: 15%; /* Bottom-middle */
+}
+
+#Aquarius {
+  top: 50%; /* Lower in the sky */
+  left: 5%; /* Bottom-left corner */
+}
+
+#Pisces {
+  top: 30%; /* Near Aries */
+  left: 0%; /* Left edge */
+}
 
 /* Section 2: Links Section Styling */
 #links-section {
-  background-image: url("images/section2bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 60px 20px; /* Space for the heading and cards */
   text-align: center;
 }
 
@@ -114,7 +340,8 @@ img{
   font-size: 2rem;
   font-weight: bold;
   color: #ffffff;
-  margin-bottom: 40px; /* Space between the heading and the content */
+  margin-bottom: 5%;
+  margin-top: 0;
 }
 
 /* Content container styling */
@@ -124,13 +351,14 @@ img{
   gap: 20px; /* Space between columns */
   justify-content: center; /* Centers the grid within the section */
   align-items: start; /* Align items at the top */
+  background-image: url(images/screen3_stars1.png);
 }
 
 /* Individual column styling */
 #links-section .column {
   background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
   border-radius: 10px;
-  padding: 20px;
+  padding: 5%;
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
@@ -177,7 +405,6 @@ img{
   display: flex;
   gap: 40px;
   padding: 40px 20px;
-  background-image: url("images/section3bg.jpg");
   background-size: cover; /* Ensures the image fills the container */
   background-repeat: no-repeat; /* Prevents tiling */
   background-position: center; /* Centers the image */
@@ -187,6 +414,7 @@ img{
   display: flex;
   color: #f9f9f9; /* Light text for visibility */
   text-align: left;
+  background-image: url(images/screen3_stars1.png);
 }
 
 .section3-img {
@@ -210,14 +438,14 @@ img{
   text-align: left;
   font-size: 36px;
   margin-bottom: 10px;
-  color:#CBB067; /* Golden for highlight */
+  color:white; /* Golden for highlight */
 }
 
 .info-text h2 {
   text-align: left;
   font-size: 28px;
   margin-bottom: 20px;
-  color:#CBB067;
+  color:#ffffff;
 }
 
 .info-text p {
@@ -230,7 +458,7 @@ img{
   padding: 12px 20px;
   font-size: 16px;
   color: #f4f1f1;
-  background: rgba(241, 212, 107, 0.6); /* Slightly transparent black for contrast */
+  background: rgba(243, 243, 246, 0.2); /* Darker hover effect */
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -251,7 +479,7 @@ img{
 
 .info-option {
   background: rgba(0, 0, 0, 0.6); /* Slightly transparent black for contrast */
-  padding: 15px;
+  padding: 10%;
   border-radius: 8px;
   text-align: center;
   flex: 1;
@@ -262,14 +490,14 @@ img{
 .info-option:hover {
   background: rgba(10, 10, 60, 0.8); /* Darker hover effect */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Enhanced hover shadow */
-  padding: 15px;
+  padding: 8%;
   transform: translateY(-5px);
 }
 
 .info-option h3 {
   font-size: 20px;
   margin-bottom: 10px;
-  color:#CBB067;
+  color: white;
 }
 
 .info-option p {
@@ -279,11 +507,10 @@ img{
 
 /* Section 4: Reviews */
 #reviews-section {
-
+  background-image: url(images/screen3_stars1.png);
   color: #FFFFFF; /* Modern White */
   padding: 50px 20px;
   text-align: center;
-  background-image: url("images/section4bg.jpg");
   background-size: cover; /* Ensures the full image is visible */
   background-position: center; /* Centers the background image */
   background-repeat: no-repeat; /* Prevents tiling of the image */
@@ -291,13 +518,12 @@ img{
   max-width: 100%; /* Ensures the section spans the full width */
   display: flex; /* Enables Flexbox */
   flex-direction: column; /* Stacks children vertically */
-  justify-content: flex-end; /* Aligns text at the bottom of the section */
   align-items: center; /* Centers the content horizontally */
 }
 
 #reviews-section h2 {
   font-size: 2.5rem; /* Larger title font for emphasis */
-  color:#CBB067; /* Gold for a luxurious touch */
+  color:white; /* Gold for a luxurious touch */
   margin-bottom: 10px;
   text-transform: uppercase;
 }
@@ -335,7 +561,7 @@ img{
   display: block;
   font-size: 1rem;
   font-weight: bold;
-  color: #CBB067; /* Aqua for names */
+  color: white; /* Aqua for names */
   margin-top: 10px;
 }
 
@@ -355,43 +581,445 @@ img{
 }
 
 
-/* Footer Styling */
-#footer {
-  background-color: rgba(255, 255, 255, 0.1); /* Transparent white background */
-  color: #ffffff; /* Text color */
-  text-align: center; /* Center align text */
-  padding: 20px 0; /* Spacing for the footer */
-  border-top: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border on top */
+/* Zodiac Section - Responsive Adjustments */
+@media (max-width: 1200px) {
+  .zodiac-sign {
+   width: 20%;
+  }
+  #instructions {
+    font-size: 40%; /* Adjust font size for smaller screens */
+  }
+  .horoscope-display {
+    font-size: 40%; /* Adjust font size for smaller screens */
+    text-align: center;
+  }
 }
 
-.footer-container {
-  max-width: 1200px; /* Constrain the width */
-  margin: 0 auto; /* Center the content */
+  @media (max-width: 768px) {
+  .zodiac-sign {
+    width: 20%; /* Smaller size for the signs */
+    font-size: 0.5rem; /* Adjust font size */
+    transition: transform 0.3s; /* Smooth animation for hover */
+  }
+
+  .zodiac-sign:hover {
+    transform: scale(1.2); /* Enlarge on hover */
+  }
+#instructions {
+  font-size: 20%; /* Adjust font size for smaller screens */
+}
+  /* Center Horoscope Display */
+  .horoscope-display {
+    font-size: 20%; /* Adjust font size for smaller screens */
+    text-align: center;
+  }
+
+  .zodiac-sign:hover + .horoscope-display {
+    display: block; /* Show horoscope text when a sign is hovered */
+    font-size: 20%; /* Adjust font size for smaller screens */
+  }
+}
+
+/* Links Section - Responsive Adjustments */
+@media (max-width: 1200px) {
+  #links-section {
+    padding: 40px 10px; /* Reduce padding */
+  }
+
+  .section2-content {
+    grid-template-columns: repeat(2, minmax(150px, 1fr)); /* Switch to two columns */
+  }
+}
+
+@media (max-width: 768px) {
+  .section2-content {
+    grid-template-columns: 1fr; /* Single-column layout for small screens */
+  }
+}
+
+/* Info Section - Responsive Adjustments */
+@media (max-width: 1200px) {
+  #info-section {
+    flex-direction: column; /* Stack the content vertically */
+    gap: 20px; /* Reduce the gap */
+  }
+
+  .section3-img {
+    width: 80%; /* Allow image to stretch fully */
+    height: auto;
+    margin: 0 auto; /* Center the image */
+  }
+
+  .info-text {
+    margin: 0 auto; /* Center text */
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .info-text h1, .info-text h2 {
+    font-size: 1.5rem; /* Adjust font size */
+  }
+
+  .info-text p {
+    font-size: 14px; /* Smaller text */
+  }
+}
+
+/* Reviews Section - Responsive Adjustments */
+@media (max-width: 1200px) {
+  .reviews-container {
+    grid-template-columns: repeat(2, 1fr); /* Two-column layout */
+  }
+}
+
+@media (max-width: 768px) {
+  .reviews-container {
+    grid-template-columns: 1fr; /* Single-column layout */
+    height: auto;
+    overflow: scroll;
+  }
+
+  #reviews-section h2 {
+    font-size: 1.8rem; /* Reduce font size for heading */
+  }
+}
+
+/* Footer Section - Responsive Adjustments */
+@media (max-width: 768px) {
+  .footer-container {
+    gap: 5px; /* Reduce spacing */
+  }
+
+  .footer-links {
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 10px; /* Reduce gap */
+  }
+
+  footer p {
+    font-size: 0.8rem; /* Smaller font for copyright text */
+  }
+}
+
+
+/* Horoscope Page Exclusive */
+.horoscope{
+  display: flex;
+  flex-direction: row;
+  margin-left: 15%;
+  margin-right: 15%;
+  column-gap: 10%;
+  justify-items: center;
+}
+@media (max-width: 1250px) {
+.horoscope{
+  flex-direction: column;
+}
+.imageCenter{
+justify-items: center;
+padding-left: 25%;
+}
+}
+
+.horoscopeCol1{
+justify-items: center;
+flex: 2 250px;
+min-width: 250px;
+}
+.horoscopeCol2{
+padding-top: 8%;
+}
+.titleWihSubtitle{
+  display: grid;
+  margin-left: 15%;
+  margin-right: 15%;
+  grid-template-rows: 2fr 1fr;
+}
+.signSelector{
+  display: flex;
+  grid-template-columns: 140px 140px 140px 140px 140px 140px;
+  grid-template-rows :  100px 100px;
+  padding: 2%;
+  background-size: contain;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+/*Signs that are used as buttons*/
+.signSelector > div {
+  background-color: #000229;
+  max-width: 200px
+}
+.signSelector > div:hover {
+      background: rgba(10, 10, 60, 0.8); /* Darker hover effect */
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Enhanced hover shadow */
+      transform: scale(1.05)
+}
+.pageWrapper{
+  display:grid;
+  gap:3%;
+  padding-top: 2%;
+  padding-left: 15%;
+  padding-right: 15%;
+  justify-content: center;
+  background-image: url(images/screen3_stars1.png);
+  grid-template-rows: auto;
+}
+.suggestions{
+display:grid;
+grid-template-columns: 1fr 1fr 1fr;
+gap: 5%;
+flex-grow: 2;
+justify-content: center;
+margin-bottom: 18%;
+}
+.suggestions >a{
+background-color: #000229;
+color: #CBB067 ;
+padding: 2%;
+text-align: center;
+box-sizing: border-box;
+text-decoration: none;
+cursor: pointer;
+margin-bottom: 100%;
+margin-top: 5%;
+}
+.suggestions>a:hover{
+background: rgba(10, 10, 60, 0.8); /* Darker hover effect */
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Enhanced hover shadow */
+transform: scale(1.05)
+}
+/*
+RETIRED
+signSelectorgrid{
+  display: grid;
+  grid-template-columns: 140px 140px 140px 140px 140px 140px;
+  grid-template-rows :  100px 100px;
+  padding: 2%;
+  background-color: grey;
+  gap: 10px;
+  justify-content: center;
+}
+*/
+
+
+/* Blog Page Style */
+/* Hero Section */
+.hero {
+  width: 100%;
+  height: 100vh; /* Full viewport height */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 10px; /* Space between elements */
+  justify-content: center; /* Vertical centering */
+  align-items: center;    /* Horizontal centering */
+  text-align: center;
+  padding: 40px;
+  background-image: url("images/screen3_stars1.png");
 }
 
-.footer-links {
-  display: flex;
-  gap: 15px; /* Space between links */
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+.hero h1 {
+  color: #ffc107;
+  font-size: 2.5rem;
+  margin-bottom: 20px; /* Adds spacing below the header */
 }
 
-.footer-links a {
-  color: #ffffff; /* White text color for links */
-  text-decoration: none; /* Remove underline */
-  font-weight: bold; /* Make the links bold */
-  transition: color 0.3s ease; /* Smooth hover effect */
+.hero p {
+  color: #f5f5f5;
+  font-size: 1.2rem;
+  max-width: 80%;
+  margin: 0 auto;
+  line-height: 1.6;
+  text-align: center;
 }
 
-.footer-links a:hover {
-  color: #ffd700; /* Change to gold on hover */
+      /* Section Layout */
+      .section-container {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          max-width: 900px;
+          margin: 40px auto;
+          padding: 20px;
+          background: rgba(0, 0, 0, 0.3);
+          border-radius: 10px;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .section-text {
+          flex: 1;
+          padding: 20px;
+          text-align: left;
+      }
+
+      .section-text h2 {
+          color: #ffa500;
+          margin-bottom: 10px;
+      }
+
+      .section-text p.short-description {
+          font-style: italic;
+          color: #f5f5f5;
+      }
+
+      .section-image {
+          flex: 1;
+          text-align: center;
+      }
+
+      .section-image img {
+          max-width: 100%;
+          border-radius: 8px;
+      }
+
+      .reverse {
+          flex-direction: row-reverse;
+      }
+
+      /* Buttons */
+      .btn {
+          display: inline-block;
+          margin-top: 10px;
+          padding: 10px 15px;
+          border: none;
+          cursor: pointer;
+          border-radius: 5px;
+          font-size: 1rem;
+          transition: 0.3s ease;
+      }
+
+      .btn-primary {
+          background-color: #ffcc00;
+          color: black;
+      }
+
+      .btn-primary:hover {
+          background-color: #ffaa00;
+      }
+
+      /* Modal Styling */
+      .modal {
+          display: none;
+          position: fixed;
+          z-index: 1000;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.7);
+      }
+
+      .modal-content {
+  background-color: #1a1a2e;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  max-height: 90vh; /* Prevents it from exceeding the viewport height */
+  overflow-y: auto; /* Allows scrolling if content is taller than the screen */
+  text-align: center;
+  color: #fff;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-footer p {
-  font-size: 0.9rem; /* Smaller font for copyright text */
-  opacity: 0.8; /* Slightly transparent text */
-  margin-top: 10px;
-}
+
+      .close {
+          position: absolute;
+          top: 10px;
+          right: 15px;
+          font-size: 24px;
+          cursor: pointer;
+      }
+
+      /*  Mobile Responsive Styles */
+      @media (max-width: 768px) {
+          .section-container {
+              flex-direction: column; /*  Stack sections on small screens */
+              text-align: center;
+          }
+
+          .reverse {
+              flex-direction: column;
+          }
+
+          .section-text {
+              text-align: center;
+          }
+
+          .section-image img {
+              max-width: 80%;
+          }
+
+          .hero h1 {
+              font-size: 2rem;
+          }
+
+          .hero p {
+              font-size: 1rem;
+          }
+      }
+
+   /* Sign Up Page */
+      /* Container for Main Content */
+    .container {
+      position: relative; /* Allows for overlapping elements */
+      padding: 20px;
+      max-width: 800px; /* Sets maximum width for content */
+      margin: 0 auto; /* Centers content horizontally */
+    }
+
+    /* Section Heading Styling */
+    .section-heading {
+      font-size: 2rem;
+      text-align: center; /* Centers the heading text */
+      color: rgba(255, 255, 255, 0.8); /* Slightly transparent white text */
+      margin-bottom: 10px;
+    }
+
+    /* Section Backgrounds */
+    section {
+      margin: 20px 0; /* Adds space around sections */
+      padding: 20px;
+      border-radius: 10px; /* Rounds the corners */
+      
+    }
+
+    /* Input Field Styling */
+    form input, form textarea {
+      width: 100%; /* Stretches inputs to full width */
+      padding: 8px;
+      margin: 5px 0; /* Adds space between fields */
+      border: 1px solid rgba(255, 255, 255, 0.5); /* Light border */
+      background: rgba(255, 255, 255, 0.1); /* Transparent background */
+      color: white; /* White text in inputs */
+      border-radius: 5px; /* Slightly rounded corners */
+    }
+
+    form input::placeholder, form textarea::placeholder {
+      color: rgba(255, 255, 255, 0.7); /* Light gray placeholders */
+    }
+
+    /* Button Styling */
+    button {
+      background-color: rgba(0, 85, 204, 0.8); /* Blue background */
+      color: white; /* White button text */
+      padding: 10px 50px;
+      border: none; /* Removes border */
+      border-radius: 5px; /* Rounds corners */
+      font-size: 1rem;
+      cursor: pointer; /* Pointer cursor on hover */
+      transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+    }
+
+    button:hover {
+      background-color: rgba(0, 65, 155, 0.8); /* Darker blue hover effect */
+      transform: scale(1.05); /* Slight zoom-in effect */
+    }
+
+    /* Responsive Design for Smaller Screens */
+    @media (max-width: 768px) {
+      .container {
+        width: 90%; /* Reduces width for small screens */
+      }
+    }
