@@ -7,46 +7,31 @@
     <link rel="stylesheet" href="signStyles.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
     <nav>
         <div class="navigationBar">
-            <a class="navigationButton" href = ./home.html style="text-align: left;">
-                <div>
-                    Cosmic Compass
-                </div>
+            <a class="navigationButton" href="./home.html" style="text-align: left;">
+                <div>Cosmic Compass</div>
             </a>
-            <a class="navigationButton" href= "./horoscopes.html">
-                <div>
-                    Horoscopes
-                </div>
+            <a class="navigationButton" href="./horoscopes.html">
+                <div>Horoscopes</div>
             </a>
-            <a class="navigationButton" href= "./blog.html">
-                <div>
-                    Blog
-                </div>
+            <a class="navigationButton" href="./blog.html">
+                <div>Blog</div>
             </a>
             <a class="navigationButton" href="./signGame.html">
-                <div>
-                    Compatibility Test
-                </div>
+                <div>Compatibility Test</div>
             </a>
             <a class="navigationButton" href="./newsletter.html">
-                <div>
-                    Newsletter
-                </div>
+                <div>Newsletter</div>
             </a>
             <a class="navigationButton">
-                <div class="highlightedButton">
-                    Login 
-                </div>
+                <div class="highlightedButton">Login</div>
             </a>
         </div>
     </nav>
-    
-    
 
-    
-    
-    
+    <!-- Info Section -->
     <div class="info-section">
         <div class="info-content">
             <img src="images/zodiac/astrology.png" alt="Zodiac Compatibility" class="info-image">
@@ -60,59 +45,58 @@
             </div>
         </div>
     </div>
-    
-    
-    
-    
-    
-    
-    
-    
+
+    <!-- Page Divider Image -->
     <img src="images/zodiac/pageSplitter.png" alt="Border Image" class="border-image">
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <h1 class = "center-game-title">Zodiac and Planet Matching Game</h1>
-    <p class = "center-game-subtitle">Drag the zodiac symbols to their corresponding ruling planets!</p>
+
+    <!-- Zodiac and Planet Matching Game Section -->
+    <h1 class="center-game-title">Zodiac and Planet Matching Game</h1>
+    <p class="center-game-subtitle">Drag the zodiac symbols to their corresponding ruling planets!</p>
     <div class="game-container" id="mGame">
-        <div class="zodiac-container" id="zodiacContainer"></div>
-        <div class="planet-container" id="planetContainer"></div>
+        <!-- Zodiac Signs -->
+        <div class="zodiacs">
+            <img src="images/zodiac/aries.png" alt="Aries" id="aries" draggable="true">
+            <img src="images/zodiac/taurus.png" alt="Taurus" id="taurus" draggable="true">
+            <img src="images/zodiac/gemini.png" alt="Gemini" id="gemini" draggable="true">
+            <img src="images/zodiac/cancer.png" alt="Cancer" id="cancer" draggable="true">
+            <img src="images/zodiac/leo.png" alt="Leo" id="leo" draggable="true">
+            <img src="images/zodiac/virgo.png" alt="Virgo" id="virgo" draggable="true">
+            <img src="images/zodiac/libra.png" alt="Libra" id="libra" draggable="true">
+            <img src="images/zodiac/scorpio.png" alt="Scorpio" id="scorpio" draggable="true">
+            <img src="images/zodiac/sagittarius.png" alt="Sagittarius" id="sagittarius" draggable="true">
+            <img src="images/zodiac/capricorn.png" alt="Capricorn" id="capricorn" draggable="true">
+            <img src="images/zodiac/aquarius.png" alt="Aquarius" id="aquarius" draggable="true">
+            <img src="images/zodiac/pisces.png" alt="Pisces" id="pisces" draggable="true">
+        </div>
+        <!-- Planets -->
+        <div class="planets">
+            <div id="mars" data-zodiac="aries"><img src="images/zodiac/mars.png" alt="Mars"></div>
+            <div id="venus" data-zodiac="taurus"><img src="images/zodiac/venus.png" alt="Venus"></div>
+            <div id="mercury" data-zodiac="gemini"><img src="images/zodiac/mercury.png" alt="Mercury"></div>
+            <div id="moon" data-zodiac="cancer"><img src="images/zodiac/moon.png" alt="Moon"></div>
+            <div id="sun" data-zodiac="leo"><img src="images/zodiac/sun.png" alt="Sun"></div>
+            <div id="mercury" data-zodiac="virgo"><img src="images/zodiac/mercury.png" alt="Mercury"></div>
+            <div id="venus" data-zodiac="libra"><img src="images/zodiac/venus.png" alt="Venus"></div>
+            <div id="pluto" data-zodiac="scorpio"><img src="images/zodiac/pluto.png" alt="Pluto"></div>
+            <div id="jupiter" data-zodiac="sagittarius"><img src="images/zodiac/jupiter.png" alt="Jupiter"></div>
+            <div id="saturn" data-zodiac="capricorn"><img src="images/zodiac/saturn.png" alt="Saturn"></div>
+            <div id="uranus" data-zodiac="aquarius"><img src="images/zodiac/uranus.png" alt="Uranus"></div>
+            <div id="neptune" data-zodiac="pisces"><img src="images/zodiac/neptune.png" alt="Neptune"></div>
+        </div>
     </div>
-    
-    <div id="result" class="result"></div>
-    
-    <div class="game-button">        
-        <button id="submitBtn" class="styled-button" onclick="checkMatches()">Submit</button>
-        <button id="playAgainBtn" class="styled-button hidden" onclick="resetGame()">Play Again</button>
-    </div>
+    <div id="feedback"></div>
+    <div id="message"></div>
+    <button id="gameButton">Submit Answers</button>
 
-
-
-
-
+    <!-- Page Divider Image -->
     <img src="images/zodiac/pageSplitter2.png" alt="Border Image" class="border-image1">
 
-
-
-    <div class = "compatibility-container" id="compTest">
+    <!-- Zodiac Compatibility Test section -->
+    <div class="compatibility-container" id="compTest">
         <h1 class="center-game-title">Zodiac Compatibility Test</h1>
         <p class="center-game-subtitle">Select 2 zodiac signs to learn more about their compatibility!</p>
-
         <div class="compatibility-selection">
+            <!-- Zodiac Dropdowns -->
             <select id="zodiac1">
                 <option value="">Select First Zodiac Sign</option>
                 <option value="aries">Aries</option>
@@ -128,13 +112,7 @@
                 <option value="aquarius">Aquarius</option>
                 <option value="pisces">Pisces</option>
             </select>
-
-
-
             <button id="checkCompatibilityBtn" class="styled-button">Check Compatibility</button>
-
-
-
             <select id="zodiac2">
                 <option value="">Select Second Zodiac Sign</option>
                 <option value="aries">Aries</option>
@@ -151,21 +129,19 @@
                 <option value="pisces">Pisces</option>
             </select>
         </div>
-    
+        <!-- Compatibility result display -->
         <div class="compatibility-result">
             <div id="zodiac1Image" class="zodiac-compatibility-image"></div>
             <div class="heart">❤️</div>
             <div id="zodiac2Image" class="zodiac-compatibility-image"></div>
         </div>
-    
         <div id="compatibilityPercentage" class="result-percent"></div>
         <div id="compatibilityDescription" class="compatibility-description"></div>
         <button id="findMoreCompatibilityBtn" class="styled-button hidden" onclick="resetCompatibility()">Find More Compatibility</button>
     </div>
 
-
-     <!-- Footer Section -->
-     <footer id="footer">
+    <!-- Footer Section -->
+    <footer id="footer">
         <div class="footer-container">
             <div class="footer-links">
                 <a href="horoscopes.html">Horoscopes</a>
