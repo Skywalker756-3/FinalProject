@@ -7,42 +7,24 @@
     <link rel="stylesheet" href="signStyles.css">
 </head>
 <body>
+    <!-- Navigation Bar-->
     <nav>
         <div class="navigationBar">
-            <a class="navigationButton" href = ./home.html style="text-align: left;">
-                <div>
-                    Cosmic Compass
-                </div>
-            </a>
-            <a class="navigationButton" href= "./horoscopes.html">
-                <div>
-                    Horoscopes
-                </div>
-            </a>
-            <a class="navigationButton" href= "./blog.html">
-                <div>
-                    Blog
-                </div>
-            </a>
-            <a class="navigationButton" href="./signGame.html">
-                <div>
-                    Compatibility Test
-                </div>
-            </a>
-            <a class="navigationButton" href="./newsletter.html">
-                <div>
-                    Newsletter
-                </div>
-            </a>
-            <a class="navigationButton">
-                <div class="highlightedButton">
-                    Login 
-                </div>
-            </a>
+            <a class="nav-logo" href="home.html">Cosmic Compass</a>
+            <button class="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links">
+                <a class="navigationButton" href="horoscopes.html">Horoscopes</a>
+                <a class="navigationButton" href="blog.html">Blog</a>
+                <a class="navigationButton" href="signGame.html">Game</a>
+                <a class="navigationButton" href="newsletter.html">Newsletter</a>
+                <a class="navigationButton highlightedButton" href="signup.html">Login</a>
+            </div>
         </div>
-    </nav>
-
-    
+      </nav>
     
     <div class="newscontent">
         <div class="news-paragraph">
@@ -78,48 +60,31 @@
             </div>
         </div>
     </div>
-    <div class="news-signup-section">
-        <h2>Join Our Newsletter!</h2>
-        <form id="news-signupForm">
-            <div class="form-group">
-                <label for="firstName">First Name:</label>
-                <input type="text" id="firstName" name="firstName" required>
-            </div>
-            <div class="form-group">
-                <label for="lastName">Last Name:</label>
-                <input type="text" id="lastName" name="lastName" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="styled-button">Join</button>
-        </form>
-    </div>
     
     
     
     
     
-    <!-- Footer Section -->
-    <footer id="footer">
-        <div class="footer-container">
-            <div class="footer-links">
-                <a href="horoscopes.html">Horoscopes</a>
-                <a href="blog.html">Blog</a>
-                <a href="signGame.html">Compatibility Test</a>
-                <a href="newsletter.html">Newsletter</a>
-            </div>
-            <p>&copy; 2025 Cosmic Compass. All Rights Reserved.</p>
-        </div>
-    </footer>
-
+    
+    
+    
+    
+    
+    
 
     <script src="newsletter.js"></script>
 
 <body>
+    <!-- Footer Section -->
+<footer id="footer">
+    <div class="footer-container">
+        <div class="footer-links">
+            <a href="horoscopes.html">Horoscopes</a>
+            <a href="blog.html">Blog</a>
+            <a href="signGame.html">Game</a>
+            <a href="newsletter.html">Newsletter</a>
+        </div>
+        <p>&copy; 2025 Cosmic Compass. All Rights Reserved.</p>
+    </div>
+</footer>
 <html>
