@@ -6,39 +6,24 @@
 <body>
     <!-- Navigation Bar-->
     <nav>
-        <div class="navigationBar">
-            <a class="navigationButton" href = ./home.html style="text-align: left;">
-                <div>
-                    Cosmic Compass
-                </div>
-            </a>
-            <a class="navigationButton" href= "./horoscopes.html">
-                <div>
-                    Horoscopes
-                </div>
-            </a>
-            <a class="navigationButton" href= "./blog.html">
-                <div>
-                    Blog
-                </div>
-            </a>
-            <a class="navigationButton" href="./compatibility.html">
-                <div>
-                    Compatibility Test
-                </div>
-            </a>
-            <a class="navigationButton" href="./newsletter.html">
-                <div>
-                    Newsletter
-                </div>
-            </a>
-            <a class="navigationButton">
-                <div class="highlightedButton">
-                    Login 
-                </div>
-            </a>
-        </div>
+      <div class="navigationBar">
+          <a class="nav-logo" href="home.html">Cosmic Compass</a>
+          <button class="hamburger" aria-label="Toggle navigation">
+              <span></span>
+              <span></span>
+              <span></span>
+          </button>
+          <div class="nav-links">
+              <a class="navigationButton" href="horoscopes.html">Horoscopes</a>
+              <a class="navigationButton" href="blog.html">Blog</a>
+              <a class="navigationButton" href="signGame.html">Game</a>
+              <a class="navigationButton" href="newsletter.html">Newsletter</a>
+              <a class="navigationButton highlightedButton" href="signup.html">Login</a>
+          </div>
+      </div>
     </nav>
+    
+
     <h1 class="majorTitle"></h1>
     <header>
         <h1>Welcome to the Cosmic Compass</h1>
@@ -47,11 +32,49 @@
     
     <!-- Section 1: Interactive Horscopes -->
     <section id="zodiac-section">
-        <map name="image-map">
-            <area target="" alt="aries" title="aries" href="" coords="209,159,437,246,215,652,-3,593,11,138" shape="poly">
-            <area target="" alt="taurus" title="taurus" href="" coords="443,252,212,652,363,795,755,564,628,381" shape="poly">
-        </map>
-        <div id="hover-text"></div>
+            <!-- Instructions -->
+            <div id="instructions">Click on a sign to reveal your horoscope!</div>
+          
+            <!-- Zodiac Signs -->
+            <div class="zodiac-sign" id="Aries" data-horoscope="Aries: You are bold and ambitious.">
+              <img src="images/buttons/Aries.png" alt="Aries">
+            </div>
+            <div class="zodiac-sign" id="Taurus" data-horoscope="Taurus: You are reliable and patient.">
+              <img src="images/buttons/Taurus.png" alt="Taurus">
+            </div>
+            <div class="zodiac-sign" id="Gemini" data-horoscope="Gemini: You are adaptable and outgoing.">
+              <img src="images/buttons/Gemini.png"  alt="Gemini">
+            </div>
+            <div class="zodiac-sign" id="Cancer" data-horoscope="Cancer: You are intuitive and caring.">
+              <img src="images/buttons/Cancer.png" alt="Cancer">
+            </div>
+            <div class="zodiac-sign" id="Leo" data-horoscope="Leo: You are passionate and generous.">
+              <img src="images/buttons/Leo.png" alt="Leo">
+            </div>
+            <div class="zodiac-sign" id="Virgo" data-horoscope="Virgo: You are analytical and practical.">
+              <img src="images/buttons/Virgo.png" alt="Virgo">
+            </div>
+            <div class="zodiac-sign" id="Libra" data-horoscope="Libra: You are diplomatic and charming.">
+              <img src="images/buttons/Libra.png" alt="Libra">
+            </div>
+            <div class="zodiac-sign" id="Scorpio" data-horoscope="Scorpio: You are resourceful and brave.">
+              <img src="images/buttons/Scorpio.png" alt="Scorpio">
+            </div>
+            <div class="zodiac-sign" id="Sagittarius" data-horoscope="Sagittarius: You are adventurous and optimistic.">
+              <img src="images/buttons/Sagittarius.png" alt="Sagittarius">
+            </div>
+            <div class="zodiac-sign" id="Capricorn"  data-horoscope="Capricorn: You are disciplined and responsible.">
+              <img src="images/buttons/Capricorn.png" alt="Capricorn">
+            </div>
+            <div class="zodiac-sign" id="Aquarius"  data-horoscope="Aquarius: You are independent and innovative.">
+              <img src="images/buttons/Aquarius.png" alt="Aquarius">
+            </div>
+            <div class="zodiac-sign" id="Pisces"  data-horoscope="Pisces: You are compassionate and imaginative.">
+              <img src="images/buttons/Pisces.png" alt="Pisces">
+            </div>
+          
+            <!-- Horoscope Display -->
+            <div id="horoscope-display"></div>
     
     </section>
     
@@ -149,7 +172,7 @@
         <div class="footer-links">
             <a href="horoscopes.html">Horoscopes</a>
             <a href="blog.html">Blog</a>
-            <a href="compatibility.html">Compatibility Test</a>
+            <a href="signGame.html">Game</a>
             <a href="newsletter.html">Newsletter</a>
         </div>
         <p>&copy; 2025 Cosmic Compass. All Rights Reserved.</p>
@@ -157,4 +180,3 @@
 </footer>
 
 <script src="script.js"></script>
-<footer></footer>

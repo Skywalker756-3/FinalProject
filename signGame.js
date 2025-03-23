@@ -1,137 +1,182 @@
-const zodiacSigns = [
-    { id: "aries", img: "images/zodiac/aries.png", planet: "mars" },
-    { id: "taurus", img: "images/zodiac/taurus.png", planet: "venus" },
-    { id: "gemini", img: "images/zodiac/gemini.png", planet: "mercury" },
-    { id: "cancer", img: "images/zodiac/cancer.png", planet: "moon" },
-    { id: "leo", img: "images/zodiac/leo.png", planet: "sun" },
-    { id: "virgo", img: "images/zodiac/virgo.png", planet: "mercury" },
-    { id: "libra", img: "images/zodiac/libra.png", planet: "venus" },
-    { id: "scorpio", img: "images/zodiac/scorpio.png", planet: "pluto" },
-    { id: "sagittarius", img: "images/zodiac/sagittarius.png", planet: "jupiter" },
-    { id: "capricorn", img: "images/zodiac/capricorn.png", planet: "saturn" },
-    { id: "aquarius", img: "images/zodiac/aquarius.png", planet: "uranus" },
-    { id: "pisces", img: "images/zodiac/pisces.png", planet: "neptune" }
-];      
+document.addEventListener('DOMContentLoaded', () => {
+    const zodiacsContainer = document.querySelector('.zodiacs');
+    const planetsContainer = document.querySelector('.planets');
+    const gameButton = document.getElementById('gameButton'); // Corrected button ID
+    const feedbackDiv = document.getElementById('feedback');
+    const messageDiv = document.getElementById('message');
 
-const planets = [
-    { id: "mars", img: "images/zodiac/mars.png" },
-    { id: "venus", img: "images/zodiac/venus.png" },
-    { id: "mercury", img: "images/zodiac/mercury.png" },
-    { id: "moon", img: "images/zodiac/moon.png" },
-    { id: "sun", img: "images/zodiac/sun.png" },
-    { id: "pluto", img: "images/zodiac/pluto.png" },
-    { id: "jupiter", img: "images/zodiac/jupiter.png" },
-    { id: "saturn", img: "images/zodiac/saturn.png" },
-    { id: "uranus", img: "images/zodiac/uranus.png" },
-    { id: "neptune", img: "images/zodiac/neptune.png" }
-];
-//hi
-let userMatches = {};
+    // Zodiac and planet data
+    const zodiacData = [
+        { id: 'aries', planet: 'mars', image: 'aries.png' },
+        { id: 'taurus', planet: 'venus', image: 'taurus.png' },
+        { id: 'gemini', planet: 'mercury', image: 'gemini.png' },
+        { id: 'cancer', planet: 'moon', image: 'cancer.png' },
+        { id: 'leo', planet: 'sun', image: 'leo.png' },
+        { id: 'virgo', planet: 'mercury', image: 'virgo.png' },
+        { id: 'libra', planet: 'venus', image: 'libra.png' },
+        { id: 'scorpio', planet: 'pluto', image: 'scorpio.png' },
+        { id: 'sagittarius', planet: 'jupiter', image: 'sagittarius.png' },
+        { id: 'capricorn', planet: 'saturn', image: 'capricorn.png' },
+        { id: 'aquarius', planet: 'uranus', image: 'aquarius.png' },
+        { id: 'pisces', planet: 'neptune', image: 'pisces.png' }
+    ];
 
-function allowDrop(event) {
-    event.preventDefault();
-}
+    let userAnswers = {};
 
-function drag(event) {
-    event.dataTransfer.setData("text", event.target.id);
-}
-
-function drop(event) {
-    event.preventDefault();
-    let data = event.dataTransfer.getData("text");
-    let zodiacId = data;
-    let planetId = event.target.id;
-
-    // Get the bounding rectangle of the planet block
-    const planetRect = event.target.getBoundingClientRect();
-    const zodiacElement = document.getElementById(zodiacId);
-    const zodiacRect = zodiacElement.getBoundingClientRect();
-
-    userMatches[zodiacId] = planetId;
-    event.target.innerHTML = document.getElementById(zodiacId).innerHTML;
-    document.getElementById(zodiacId).style.display = "none"; // Hide the zodiac image after dropping
-}
-
-function checkMatches() {
-    let correct = true;
-    for (let zodiac in userMatches) {
-        if (userMatches[zodiac] !== zodiacSigns.find(z => z.id === zodiac).planet) {
-            correct = false;
-            break;
+    // Function to shuffle an array
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
         }
     }
 
-    const resultDiv = document.getElementById("result");
-    if (correct) {
-        resultDiv.innerHTML = "You are correct!";
-    } else {
-        resultDiv.innerHTML = "Try again!";
+    // Render zodiacs and planets
+    function renderGame() {
+        // Clear previous content
+        zodiacsContainer.innerHTML = '';
+        planetsContainer.innerHTML = '';
+
+        // Shuffle zodiac data and pick any 6 random zodiacs
+        const shuffledZodiacs = [...zodiacData];
+        shuffleArray(shuffledZodiacs);
+        const selectedZodiacs = shuffledZodiacs.slice(0, 6);
+
+        selectedZodiacs.forEach(zodiac => {
+            const zodiacDiv = document.createElement('div');
+            const img = document.createElement('img');
+            img.src = `images/zodiac/${zodiac.image}`;
+            img.alt = zodiac.id;
+            img.id = zodiac.id;
+            img.draggable = true;
+            zodiacDiv.appendChild(img);
+            zodiacsContainer.appendChild(zodiacDiv);
+        });
+
+        // Shuffle planets and render them
+        const selectedPlanets = selectedZodiacs.map(zodiac => zodiac.planet);
+        shuffleArray(selectedPlanets);
+        selectedPlanets.forEach(planet => {
+            const planetDiv = document.createElement('div');
+            planetDiv.dataset.zodiacs = zodiacData
+                .filter(z => z.planet === planet)
+                .map(z => z.id)
+                .join(',');
+            const img = document.createElement('img');
+            img.src = `images/zodiac/${planet}.png`;
+            img.alt = planet;
+            planetDiv.appendChild(img);
+            planetsContainer.appendChild(planetDiv);
+        });
+
+        addDragAndDropListeners();
     }
 
-    document.getElementById("submitBtn").classList.add("hidden");
-    document.getElementById("playAgainBtn").classList.remove("hidden");
-}
-
-function resetGame() {
-    userMatches = {};
-    document.getElementById("result").innerHTML = "";
-    const zodiacContainer = document.getElementById("zodiacContainer");
-    const planetContainer = document.getElementById("planetContainer");
-
-    // Clear previous content
-    zodiacContainer.innerHTML = '';
-    planetContainer.innerHTML = '';
-
-    // Shuffle zodiac signs and select 8 random ones
-    const shuffledZodiac = shuffleArray([...zodiacSigns]).slice(0, 6);
     
-    // Create a list of corresponding planets, allowing duplicates
-    const selectedPlanets = shuffledZodiac.map(zodiac => {
-        return planets.find(p => p.id == zodiac.planet);
-    });
+    function addDragAndDropListeners() {
+        const zodiacs = document.querySelectorAll('.zodiacs img');
+        const planets = document.querySelectorAll('.planets div');
 
-    // Shuffle the corresponding planets to randomize their order
-    const shuffledPlanets = shuffleArray(selectedPlanets);
+        zodiacs.forEach(zodiac => {
+            zodiac.addEventListener('dragstart', dragStart);
+        });
 
-    // Populate the zodiac container
-    shuffledZodiac.forEach(zodiac => {
-        const zodiacDiv = document.createElement("div");
-        zodiacDiv.id = zodiac.id;
-        zodiacDiv.className = "zodiac";
-        zodiacDiv.draggable = true;
-        zodiacDiv.ondragstart = drag;
-        zodiacDiv.innerHTML = `<img src="${zodiac.img}" alt="${zodiac.id}">`;
-        zodiacContainer.appendChild(zodiacDiv);
-    });
-
-    // Populate the planet container
-    shuffledPlanets.forEach(planet => {
-        const planetDiv = document.createElement("div");
-        planetDiv.id = planet.id;
-        planetDiv.className = "planet";
-        planetDiv.ondrop = drop;
-        planetDiv.ondragover = allowDrop;
-        planetDiv.innerHTML = `<img src="${planet.img}" alt="${planet.id}">`;
-        planetContainer.appendChild(planetDiv);
-    });
-
-    document.getElementById("submitBtn").classList.remove("hidden");
-    document.getElementById("playAgainBtn").classList.add("hidden");
-}
-
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
+        planets.forEach(planet => {
+            planet.addEventListener('dragover', dragOver);
+            planet.addEventListener('drop', drop);
+        });
     }
-    return array;
-}
 
-// Initialize the game on page load
-window.onload = resetGame;
+    // Drag and drop
+    function dragStart(e) {
+        e.dataTransfer.setData('text/plain', e.target.id);
+    }
 
+    function dragOver(e) {
+        e.preventDefault();
+        e.target.classList.add('hovered');
+    }
 
+    function drop(e) {
+        e.preventDefault();
+        const zodiacId = e.dataTransfer.getData('text/plain');
+        const zodiac = document.getElementById(zodiacId);
+        const planet = e.target.closest('div[data-zodiacs]');
 
+        if (planet) {
+            // Store user's answer
+            userAnswers[zodiacId] = planet.dataset.zodiacs.split(',');
+            planet.appendChild(zodiac);
+            zodiac.style.cursor = 'default';
+            zodiac.draggable = false;
+
+            // Check if all zodiacs have been moved
+            if (Object.keys(userAnswers).length === 6) {
+                zodiacsContainer.style.display = 'none'; // Hide the zodiacs container
+            }
+        }
+
+        document.querySelectorAll('.planets div').forEach(planet => planet.classList.remove('hovered'));
+    }
+
+    // Function to check answers
+    function checkAnswers() {
+        let correct = 0;
+        let incorrect = 0;
+
+        for (const [zodiacId, validZodiacs] of Object.entries(userAnswers)) {
+            if (validZodiacs.includes(zodiacId)) {
+                correct++;
+            } else {
+                incorrect++;
+            }
+        }
+
+        // Display feedback
+        feedbackDiv.textContent = `Correct: ${correct}, Incorrect: ${incorrect}`;
+
+        // Display message based on number of correct answers
+        if (correct <= 3) {
+            messageDiv.textContent = 'Please Try Again';
+            messageDiv.setAttribute('data-status', 'error'); // Red for low score
+        } else if (correct >= 4 && correct <= 5) {
+            messageDiv.textContent = "You're Almost There!";
+            messageDiv.setAttribute('data-status', 'warning'); // Yellow for medium score
+        } else if (correct === 6) {
+            messageDiv.textContent = 'Congratulations! You Got It All Right!';
+            messageDiv.setAttribute('data-status', 'success'); // Green for perfect score
+        }
+
+        gameButton.textContent = 'Reset Game';
+    }
+
+    // Reset the game
+    function resetGame() {
+        userAnswers = {};
+
+        feedbackDiv.textContent = '';
+        messageDiv.textContent = '';
+
+        zodiacsContainer.style.display = 'grid';
+
+        gameButton.textContent = 'Submit Answers';
+
+        renderGame();
+    }
+
+    renderGame();
+
+    // Button
+    gameButton.addEventListener('click', () => {
+        if (gameButton.textContent === 'Submit Answers') {
+            checkAnswers();
+        } else {
+            resetGame();
+        }
+    });
+});
+
+// Function to scroll to either comp test or the game
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -139,11 +184,7 @@ function scrollToSection(sectionId) {
     }
 }
 
-
-
-
-
-
+// Compatibility data and descriptions
 const compatibilityData = {
     "aries": { "aries": 75, "taurus": 63, "gemini": 74, "cancer": 47, "leo": 83, "virgo": 42, "libra": 62, "scorpio": 48, "sagittarius": 87, "capricorn": 38, "aquarius": 68, "pisces": 29 },
     "taurus": { "aries": 63, "taurus": 86, "gemini": 23, "cancer": 91, "leo": 29, "virgo": 73, "libra": 33, "scorpio": 89, "sagittarius": 31, "capricorn": 89, "aquarius": 11, "pisces": 88 },
@@ -159,7 +200,7 @@ const compatibilityData = {
     "pisces": { "aries": 29, "taurus": 88, "gemini": 10, "cancer": 72, "leo": 14, "virgo": 86, "libra": 29, "scorpio": 81, "sagittarius": 50, "capricorn": 76, "aquarius": 38, "pisces": 73 }
 };
 
-
+// Compatibility message for each pair
 const compatibilityDescription = {
     "aries": {
         "aries": "When two Aries come together, it is imperative for at least one of them to have mastered the art of staying calm. If this is achieved by one of them, not through passive aggression but through rational thought, their relationship can be truly rewarding. As two warm and passionate people, they can share many adventurous moments that raise their energy levels sky high. If, however, none of them has this rational, grown-up ability, it is only possible to prolong their relationship based on superficial activities and sex, of course. Since the sign of Aries takes Saturn, the wise ruler of time, patience and responsibility to its detriment, one of these partners will have to learn their lesson and take responsibility for the future of their relationship if they are to last in time.",
@@ -331,9 +372,7 @@ const compatibilityDescription = {
     },
 
 };
-
-
-
+// Compatibility test functionality
 document.getElementById('checkCompatibilityBtn').addEventListener('click', function() {
     const zodiac1 = document.getElementById('zodiac1').value;
     const zodiac2 = document.getElementById('zodiac2').value;
@@ -341,16 +380,22 @@ document.getElementById('checkCompatibilityBtn').addEventListener('click', funct
     if (zodiac1 && zodiac2) {
         const compatibility = compatibilityData[zodiac1][zodiac2];
 
+        // Displaying zodiac images
         document.getElementById('zodiac1Image').innerHTML = `<img src="images/zodiac/${zodiac1}.png" alt="${zodiac1}">`;
         document.getElementById('zodiac2Image').innerHTML = `<img src="images/zodiac/${zodiac2}.png" alt="${zodiac2}">`;
+
+        // Displaying the compatibility percentage and description
         document.getElementById('compatibilityPercentage').innerText = `Compatibility between ${capitalizeFirstLetter(zodiac1)} and ${capitalizeFirstLetter(zodiac2)} is ${compatibility}%`;
         document.getElementById('compatibilityDescription').innerText = compatibilityDescription[zodiac1][zodiac2];
+
+        // Show sthe "Find More Compatibility" button
         document.getElementById('findMoreCompatibilityBtn').classList.remove('hidden');
     } else {
         alert("Please select both zodiac signs.");
     }
 });
 
+// To reset compatibility test
 function resetCompatibility() {
     document.getElementById('zodiac1').selectedIndex = 0;
     document.getElementById('zodiac2').selectedIndex = 0;
@@ -361,7 +406,7 @@ function resetCompatibility() {
     document.getElementById('findMoreCompatibilityBtn').classList.add('hidden');
 }
 
+// Capitalize the first letter of a string
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
-
