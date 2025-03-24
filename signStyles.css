@@ -563,6 +563,10 @@ img{
   color: #fff; 
 }
 
+.newsWelcome {
+  text-align: left;
+}
+
 .newsletter-image {
   flex: 1; 
   display: flex; 
