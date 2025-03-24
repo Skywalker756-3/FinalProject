@@ -45,6 +45,9 @@ video {
   max-width: 100%;
   /*This ensures that media is never bigger than it's respective container*/
 }
+title{
+  
+}
 
 /* Navigation Bar */
 .navigationBar {
