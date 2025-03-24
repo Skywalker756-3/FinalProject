@@ -26,8 +26,8 @@
     <div class="pageWrapper">
         <div class="titleWithSubtitle">
             <div>
-                <h1 class="majorTitle">Daily Horoscopes</h1>
-                <h2 class="minorTitle"> Choose your Sign</h2>
+                <h1 class="majorTitle" style="text-align: center;">Daily Horoscopes</h1>
+                <h2 class="minorTitle" style="text-align: center;"> Choose your Sign</h2>
             </div>
             <div class="signSelector">
                 <div>
@@ -70,14 +70,17 @@
         </div>
         <div class="horoscope" id="horoscope">
             <div class="horoscopeCol1">
-                <div class="majorTitle CurrentSign" style="margin-top: -12%;">
-                    Choose Sign
-                </div>
                 <div>
                     <img class="imageCenter" id=horoscopeImage src="images/horoscopes/null.png" alt="A placeholder image for your zodiac sign">
                 </div>
             </div>
-            <div class = horoscopeCol2 id="horoscopeText">Enter your sign above to read your sign here</div>
+
+            <div class = horoscopeCol2>
+                <div class="majorTitle CurrentSign" id="signTitle">
+                    Choose Sign
+                </div>
+               <p id="horoscopeText">Enter your sign above to read your sign here</p> 
+            </div>
         </div>
         <h1 class="minorTitle">Learn more about your Zodiac</h1>
         <div class="suggestions">
@@ -99,7 +102,7 @@
                 <div class="footer-links">
                     <a href="horoscopes.html">Horoscopes</a>
                     <a href="blog.html">Blog</a>
-                    <a href="compatibility.html">Compatibility Test</a>
+                    <a href="compatibility.html">Game</a>
                     <a href="newsletter.html">Newsletter</a>
                 </div>
                 <p>&copy; 2025 Cosmic Compass. All Rights Reserved.</p>
