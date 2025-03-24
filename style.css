@@ -745,6 +745,9 @@ font-size: 3rem;
 justify-items: center;
 padding-left: 25%;
 }
+.marginedfooter{
+  margin-top: 250px;
+}
 }
 
 .horoscopeCol1{

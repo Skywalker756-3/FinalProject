@@ -89,6 +89,9 @@ Horoscope Page Exclusive
 .horoscope{
   flex-direction: column;
 }
+.marginedfooter{
+  margin-top: 200px;
+}
 .imageCenter{
 justify-items: center;
 padding-left: 25%;
