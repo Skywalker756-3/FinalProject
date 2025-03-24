@@ -358,6 +358,7 @@ select{
     border: 1px solid #ccc; 
     background-color: #444; 
     color: #fff; 
+    font-family: "Julius Sans One", sans-serif;
 }
 
 select option {
