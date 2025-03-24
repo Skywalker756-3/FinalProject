@@ -3,89 +3,73 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <!-- Navigation Bar-->
     <nav>
-        <div class="navigationBar">
-            <a class="navigationButton" href = ./home.html style="text-align: left;">
-                <div>
-                    Cosmic Compass
-                </div>
-            </a>
-            <a class="navigationButton" href= "./horoscopes.html">
-                <div>
-                    Horoscopes
-                </div>
-            </a>
-            <a class="navigationButton" href= "./blog.html">
-                <div>
-                    Blog
-                </div>
-            </a>
-            <a class="navigationButton" href="./signGame.html">
-                <div>
-                    Compatibility Test
-                </div>
-            </a>
-            <a class="navigationButton" href="./newsletter.html">
-                <div>
-                    Newsletter
-                </div>
-            </a>
-            <a class="navigationButton">
-                <div class="highlightedButton">
-                    Login 
-                </div>
-            </a>
-        </div>
+      <div class="navigationBar">
+          <a class="nav-logo" href="home.html">Cosmic Compass</a>
+          <button class="hamburger" aria-label="Toggle navigation">
+              <span></span>
+              <span></span>
+              <span></span>
+          </button>
+          <div class="nav-links">
+              <a class="navigationButton" href="horoscopes.html">Horoscopes</a>
+              <a class="navigationButton" href="blog.html">Blog</a>
+              <a class="navigationButton" href="signGame.html">Game</a>
+              <a class="navigationButton" href="newsletter.html">Newsletter</a>
+              <a class="navigationButton highlightedButton" href="signup.html">Login</a>
+          </div>
+      </div>
     </nav>
     <!--CSS Grid Wrapper for page-->
     <div class="pageWrapper">
         <div class="titleWithSubtitle">
             <div>
-                <h1 class="majorTitle">Daily Horoscopes</h1>
-                <h2>Choose your Sign</h2>
+                <h1 class="title">Daily Horoscopes</h1>
+                <h2 class="majorTitle"> Choose your Sign</h2>
             </div>
             <div class="signSelector">
                 <div>
-                    <img class="signChangeButton" src="images/buttons/Aquarius.png" alt="Click to choose Aquarius, January 20 to February 18" onclick="setSign('Aquarius')">
+                    <img class="signChangeButton" src="images/buttons/Aquarius.png" alt="Click to choose Aquarius, January 20 to February 18" onclick="setSign('Aquarius'); scrollToHoroscope()">
                 </div>
                 <div>
-                    <img class="signChangeButton" src="images/buttons/Pisces.png" alt="Click to choose Pisces, February 19 to March 20" onclick="setSign('Pisces')">
+                    <img class="signChangeButton" src="images/buttons/Pisces.png" alt="Click to choose Pisces, February 19 to March 20" onclick="setSign('Pisces'); scrollToHoroscope()">
                 </div>
                 <div>
-                    <img class="signChangeButton" src="images/buttons/Aries.png" alt="Click to choose Aries, March 21 to April 19 " onclick="setSign('Aries')">
+                    <img class="signChangeButton" src="images/buttons/Aries.png" alt="Click to choose Aries, March 21 to April 19 " onclick="setSign('Aries'); scrollToHoroscope()">
                 </div>
                 <div>
-                    <img class="signChangeButton" src="images/buttons/Taurus.png" alt="Click to choose Taurus, April 20 to May 20" onclick="setSign('Taurus')">
+                    <img class="signChangeButton" src="images/buttons/Taurus.png" alt="Click to choose Taurus, April 20 to May 20" onclick="setSign('Taurus'); scrollToHoroscope()">
                 </div>
                 <div>
-                    <img class="signChangeButton" src="images/buttons/Gemini.png" alt="Click to choose Gemini, May 21 to June 20" onclick="setSign('Gemini')">
+                    <img class="signChangeButton" src="images/buttons/Gemini.png" alt="Click to choose Gemini, May 21 to June 20" onclick="setSign('Gemini'); scrollToHoroscope()">
                 </div>
                 <div>
-                    <img class="signChangeButton" src="images/buttons/Cancer.png" alt="Click to choose Cancer, June 21 to Jule 22" onclick="setSign('Cancer')">
+                    <img class="signChangeButton" src="images/buttons/Cancer.png" alt="Click to choose Cancer, June 21 to Jule 22" onclick="setSign('Cancer'); scrollToHoroscope()">
                 </div>
                 <div>
-                    <img class="signChangeButton" src="images/buttons/Leo.png" alt="Click to choose Leo, July 23 to August 22" onclick="setSign('Leo')">
+                    <img class="signChangeButton" src="images/buttons/Leo.png" alt="Click to choose Leo, July 23 to August 22" onclick="setSign('Leo'); scrollToHoroscope()">
                 </div>
                 <div>
-                    <img class="signChangeButton" src="images/buttons/Virgo.png" alt="Click to choose Virgo, August 23 to September 22" onclick="setSign('Virgo')">
+                    <img class="signChangeButton" src="images/buttons/Virgo.png" alt="Click to choose Virgo, August 23 to September 22" onclick="setSign('Virgo'); scrollToHoroscope()">
                 </div>
                 <div>
-                    <img class="signChangeButton" src="images/buttons/Libra.png" alt="Click to choose Libra, September 23 to Oct 22" onclick="setSign('Libra')">
+                    <img class="signChangeButton" src="images/buttons/Libra.png" alt="Click to choose Libra, September 23 to Oct 22" onclick="setSign('Libra'); scrollToHoroscope()">
                 </div>
                 <div>
-                    <img class="signChangeButton" src="images/buttons/Scorpio.png" alt="Click to choose Scorpio, October 23 to November 21" onclick="setSign('Scorpio')">
+                    <img class="signChangeButton" src="images/buttons/Scorpio.png" alt="Click to choose Scorpio, October 23 to November 21" onclick="setSign('Scorpio'); scrollToHoroscope()">
                 </div>
                 <div>
-                    <img class="signChangeButton" src="images/buttons/Sagittarius.png" alt="Click to choose Sagittarius, November 22 to December 21" onclick="setSign('Sagittarius')">
+                    <img class="signChangeButton" src="images/buttons/Sagittarius.png" alt="Click to choose Sagittarius, November 22 to December 21" onclick="setSign('Sagittarius'); scrollToHoroscope()">
                 </div>
                 <div>
-                    <img class="signChangeButton" src="images/buttons/Capricorn.png" alt="Click to choose Capricorn, December 22 to January 19" onclick="setSign('Capricorn');">
+                    <img class="signChangeButton" src="images/buttons/Capricorn.png" alt="Click to choose Capricorn, December 22 to January 19" onclick="setSign('Capricorn'); scrollToHoroscope()">
                 </div>
             </div>
         </div>
-        <div class="horoscope">
+        <div class="horoscope" id="horoscope">
             <div class="horoscopeCol1">
-                <div class="majorTitle CurrentSign" style="margin-top: -12%;">
+                <div class="title CurrentSign" style="margin-top: -12%;">
                     Choose Sign
                 </div>
                 <div>
@@ -119,4 +103,4 @@
                 <p>&copy; 2025 Cosmic Compass. All Rights Reserved.</p>
             </div>
         </footer>
-<script src="./script.js"></script>
+<script src="./horoscopes.js"></script>

@@ -25,6 +25,12 @@ video {
 }
 
 /*Classes*/
+.title{
+  color: #CBB067;
+  text-shadow:3vw;
+  text-align: center;
+  font-size: 4rem;
+}
 .majorTitle{
     color: #CBB067;
     text-shadow:3vw;

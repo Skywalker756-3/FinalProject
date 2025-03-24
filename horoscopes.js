@@ -65,7 +65,10 @@ function signUpdateHandler(event)
 }
 addEventListener("click",signUpdateHandler)
 
-
+function scrollToHoroscope()
+{
+  document.getElementById('horoscope').scrollIntoView({ behavior: 'smooth' });
+}
 
 //Sign management
 function hasSignTempStorage()
