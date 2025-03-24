@@ -18,6 +18,7 @@
 
 h1, h2 {
   font-family: "Zen Tokyo Zoo", system-ui;
+  color: #CBB067 ;
 }
 /* Headings Styling */
 header {
@@ -43,24 +44,6 @@ picture,
 video {
   max-width: 100%;
   /*This ensures that media is never bigger than it's respective container*/
-}
-
-/*Classes*/
-.majorTitle{
-    color: #CBB067;
-    text-shadow:3vw;
-    text-align: center;
-    font-size: 4rem;
-}
-.minorTitle{
-    color: whitesmoke;
-    font-size: 50px;
-    text-align: center;
-    margin: auto;
-}
-
-img{
-    size:100%
 }
 
 /* Navigation Bar */
@@ -355,6 +338,11 @@ footer p {
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
+  
+}
+
+#links-section h1{
+font-size: 3rem;
 }
 
 /* Center and style the heading */
@@ -375,6 +363,7 @@ footer p {
   justify-content: center; /* Centers the grid within the section */
   align-items: start; /* Align items at the top */
   background-image: url(images/screen3_stars1.png);
+  
 }
 
 /* Individual column styling */
@@ -396,7 +385,7 @@ footer p {
 /* Text content inside columns */
 #links-section .text-content h1 {
   font-size: 40px;
-  color: #ffffff;
+  color: #CBB067 ;
   margin: 10px 0;
   font-family: "Zen Tokyo Zoo", system-ui;
   
@@ -463,15 +452,15 @@ footer p {
   text-align: left;
   font-size: 36px;
   margin-bottom: 10px;
-  color:white; /* Golden for highlight */
   font-family: "Zen Tokyo Zoo", system-ui;
+  color: #CBB067 ;
 }
 
 .info-text h2 {
   text-align: left;
   font-size: 28px;
   margin-bottom: 20px;
-  color:#ffffff;
+  color: white ;
 }
 
 .info-text p {
@@ -546,7 +535,9 @@ footer p {
   flex-direction: column; /* Stacks children vertically */
   align-items: center; /* Centers the content horizontally */
 }
-
+#reviews-section h1 {
+  font-size: 4rem;
+}
 #reviews-section h2 {
   font-size: 2.5rem; /* Larger title font for emphasis */
   color:white; /* Gold for a luxurious touch */
