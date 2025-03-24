@@ -1,10 +1,47 @@
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Merriweather:wght@300;400;700&display=swap');
-/* Headings Styling */
-h1, h2, h3 {
+/* For headings */
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+/* For content */
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+
+.zen-tokyo-zoo-regular {
+  font-family: "Zen Tokyo Zoo", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.julius-sans-one-regular {
+  font-family: "Julius Sans One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/* Import Google Fonts */
+/* For headings */
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+/* For content */
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+
+.zen-tokyo-zoo-regular {
+  font-family: "Zen Tokyo Zoo", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.julius-sans-one-regular {
+  font-family: "Julius Sans One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1, h2 {
   text-align: center;
-  font-family: 'Merriweather', serif; /* Elegant serif font */
+  font-family: "Zen Tokyo Zoo", system-ui;
   color: #CBB067; /* Gold for headings */
+}
+ h3 {
+  text-align: center;
+  font-family: "Julius Sans One", sans-serif;
+  color: white; /* Gold for headings */
 }
 body {
     background-image: url(images/screen3_clouds.png);
