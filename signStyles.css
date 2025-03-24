@@ -40,6 +40,7 @@ video {
     text-shadow:3vw;
     text-align: center;
 }
+
 .minorTitle{
     color: whitesmoke;
     font-size: larger;
@@ -64,6 +65,7 @@ video {
   font-weight: bold;
   color: #ffffff;
   text-decoration: none;
+  font-family: "Julius Sans One", sans-serif;
 }
 
 .nav-logo:hover {
@@ -75,6 +77,7 @@ video {
 .nav-links {
   display: flex;
   gap: 1em;
+  font-family: "Julius Sans One", sans-serif;
 }
 
 .navigationButton {
@@ -88,13 +91,13 @@ video {
 
 .navigationButton:hover {
   
-  background-color:  rgb(3, 3, 68);
-  color: white;
+  background-color:  #00064c;
+  color: #00064c;
 }
 
 .highlightedButton {
   color: #00064c;
-  background-color: #ffffff;
+  background-color: #00064c;
   font-weight: bold;
   border-radius: 30px;
 }
@@ -124,7 +127,7 @@ video {
       display: none;
       flex-direction: column;
       gap: 10px;
-      background-color: #020416;
+      background-color: #00064c;
       position: absolute;
       top: 100%;
       left: 0;
@@ -445,12 +448,12 @@ img{
     border-radius: 20px;
 }
 .navigationButton:hover{
-    color:  #00064c;
-    background-color: #ffffff;
+    color:  #ffff;
+    background-color:#00064c;
 }
 .highlightedButton{
-    background-color: black;
-    color: #CBB067; /* Gold for headings */
+    background-color: white;
+    color: #00064c; /* Gold for headings */
     border-radius: 20px;
 }
 .doubleColumn{

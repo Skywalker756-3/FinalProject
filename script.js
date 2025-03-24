@@ -256,11 +256,27 @@ window.onclick = function(event) {
 };
 
 //Sign up Page 
-//Sign Up Page - Form submission
-  // Adds an alert when a form is submitted successfully
-  document.querySelectorAll("form").forEach(form => {
-    form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        alert("Form submitted successfully!");
+// Sign Up Page - Form submission with validation
+document.querySelectorAll("form").forEach(form => {
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const inputs = form.querySelectorAll("input, textarea, select");
+    let isEmpty = false;
+
+    inputs.forEach(input => {
+      if (input.hasAttribute("required") && !input.value.trim()) {
+        isEmpty = true;
+      }
     });
+
+    if (isEmpty) {
+      alert("Please fill out all required fields before submitting.");
+    } else {
+      alert("Form submitted successfully!");
+      // Uncomment the next line to allow actual form submission if needed:
+      // form.submit();
+    }
   });
+});
+
