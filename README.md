@@ -1,23 +1,15 @@
 # FinalProject
 This is an astrology website, it features:
 
--   Login account system
 -   Horoscopes
 -   Home page
 -   Blog
-    - Lunar phases
-    - Energy in the stars
+  -   Lunar phases
+  -   Energy in the stars
 -   Sign Identification
--	Sign compatibility 
+-	  Sign compatibility 
 -   Matching game sign to pictures
 -   Newsletter
-
-Lowest Priority
--   Downloadable Wallpapers for each sign
--	Star Graph
--	Tarot Card Readings
--	Fortune Cookie
-
 
 Below these ideas are expanded on
 
@@ -30,10 +22,10 @@ Whenever we add a new script file the browser has to load that in-between webpag
 In general we load the scripts in last to prevent the page from being viewable without the visual elements, this is a small tradeoff for enhancing the user experience.
 
 ### Consistant Navigation Bar
-A bar at the top that leads to important webpages, it puts an emphasis on the login button and the top left is the name of the site which leads to the homepage.
+A bar at the top that leads to important webpages, it puts an emphasis on the login button and the top left is the name of the site which leads to the homepage this is useful for users that have a goal in mind when they are checking out a website because it's the first thing that users scan in a webpage.
 
 ### Consistant styling defined in style.css
-Use a similar theme for the background and font among elements, be sure to use classes for more specific use cases. Avoid using inline CSS as much as possible.
+Use a similar theme for the background and font among elements, be sure to use classes for more specific use cases. Avoid using inline CSS as much where possible.
 
 ### Responsive Design
 This is designing for multiple different types of devices and users, we need the webpages to respond to changes in webpage size.
