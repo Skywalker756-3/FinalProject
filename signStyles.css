@@ -730,6 +730,12 @@ button[type="submit"] {
         padding: 10px; 
     }
 
+    .info-content {
+      flex-direction: column;
+      height: auto;
+      padding: 20px;
+    }
+
     .info-image {
         width: 100%; 
         height: auto; 
@@ -759,9 +765,39 @@ button[type="submit"] {
     }
 
     .footer-links {
-        flex-direction: column; 
+        flex-direction: row; 
         gap: 10px; 
     }
+
+    .newscontent {
+      flex-direction: column;
+      padding: 20px;
+  }
+
+  .news-paragraph {
+      order: 1; /* Makes text appear first */
+      width: 100%;
+      padding: 0;
+  }
+
+  .slider-container {
+      order: 2; /* Makes slider appear second */
+      width: 100%;
+      margin-top: 30px;
+  }
+
+  .slider {
+      width: 100%;
+  }
+
+  .slide {
+      height: auto;
+      max-height: 400px;
+  }
+
+  .newsWelcome {
+      text-align: center;
+  }
 
     .form-group input[type="text"],
     .form-group input[type="email"],
