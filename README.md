@@ -53,7 +53,7 @@ In terms of accessibility; the website is fully adaptive to various screensizes.
 ### Protoype Walkthrough
 
 
-## Fundamental Website Components and Techniques
+# Website Design Components and Techniques
 
 ### New script tradeoff
 Whenever we add a new script file the browser has to load that in-between webpages which can reduce the user experience. However loading a very heavy script in would reduce the time to enter the website in general. So we try to find a balance where we give script heavy webpages their own script.
@@ -145,26 +145,23 @@ h1 {
 
 ## Important Features
 
-### Astrological Sign Identification
-This is an interface that lets users pick their sign, this sign will stay attached to the user's cookies. This way they won't need to repeatedly choose their sign if they don't have an account.
+### Sign Choice
+Users can choose their sign given multiple different
 
-### Login to Account
-This is either a webpage or dropdown menu that allows users to sign in with their credentials to a database, their credentials are encrypted using _________ and stored into a (mysql/nosql/sql) database along with their profile pic (Stored as longblob in databases). The account's purpose on this site is for personalization. This includes content based on the user's astrology sign.
-
-### Account Sign-up Page
-A webpage where the user enters their email and password along with a DOB which determines their sign. They can also optionally submit an image for their profile picture. After this they are automatically signed in.
+### Account Login/ Sign-up Page
+A webpage where the user enters their email credentials to create an account or login to their existing account. This component is designed to be seemlessly intergrable with PHP functionality so that backend-support can be added immediently. As of currently the user account is not stored for security reasons.
 
 ### Daily horoscope
-This is an element of the homepage, Hover over the element to reveal the horoscope. (How do we first check the user's sign? also mobile compatiblity?)
+This is an element of the homepage, Hover over the element to reveal the horoscope.
 
 ### Lunar Phases and Astrology
 A webpage that describes how the moon phase effects the user's personal astrology. f the user doesn't have an account or their sign isn't collected in the cookies then open[this interface](Select Astrological Sign) If already in the cookies, just reference them for the sign.
 
 ### Personalized Horoscopes
-This is a webpage with personalized reading for the user based on their signs. These feature daily, weekly and monthly horoscopes. f the user doesn't have an account or their sign isn't collected in the cookies then open[this interface](Select Astrological Sign) If already in the cookies, just reference them for the sign.
+This is a webpage with personalized reading for the user based on their signs. These feature daily, weekly and monthly horoscopes. If the user doesn't have an account or their sign isn't collected in the webAPI storage, then they can choose their sign without an account.
 
 ### Zodiac Sign Compatibility Test
-This is webpage that describes the relational compatibility of the user's sign with other signs. This reveals compatibility scores and describes the relationship. If the user doesn't have an account or their sign isn't collected in the cookies then open[this interface](Select Astrological Sign) If already in the cookies, just reference them for the sign.
+This is webpage that describes the relational compatibility of the user's sign with other signs. This reveals compatibility scores and describes the relationship.
 
 ### Astral Sign Guessing Game
 This is a webpage that functinos as a game where given a celebrity, users have to 3 guesses to predict what sign a celebrity is. The user is directed to the 
@@ -174,12 +171,3 @@ This is a section that displays cards of user reviews, a user can make a review 
 
 ### Account links
 These are links to our companies social media pages, this will be at the bottom of each webpage
-
-### Star Graph
-This is a webpage with a graph of the stars, if users hover over / click a star system that is associated with an astrology then the information is expanded and users can read more.
-
-### Tarot Card Reading
-This one was suggested by the professor, I'd like your input for this one bc idk.
-
-### Fortune Cookie
-Likely going to be on the homepage. The user can click on a fortune cookie for a cute animation and then read some worldly advice. From here we can save the user's cookie opening to their browser's cookies. Users can open another fortune cookie in 24 hours.
