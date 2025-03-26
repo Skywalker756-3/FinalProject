@@ -182,3 +182,11 @@ For font choices we have choosen: Julius Sans One, and Zen Tokyo Zoo which are i
 
 ## Design Documentation
 This group followed an Agile design flow which allowed for many dynamic changes and testing to occur providing us with ideal feedback as represented in the user experience documentation. We researched various different astrology sites and asked questions to people that were interested in astrology to get a sense of what type of content they would be interested in. From there we created a 
+
+# User Experience Test & Evalutation
+## Test 1
+## Test 2
+## Test 3
+## Test 4
+## Test 5
+## Changes made from feedback
