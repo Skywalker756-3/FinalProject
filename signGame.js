@@ -1,3 +1,15 @@
+// General script
+function navigateTo(url) {
+  window.location.href = url; // Redirects to the specified URL
+}
+// Toggle the navigation links when the hamburger button is clicked
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     const zodiacsContainer = document.querySelector('.zodiacs');
     const planetsContainer = document.querySelector('.planets');
