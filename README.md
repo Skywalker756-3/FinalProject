@@ -10,49 +10,42 @@ This is an astrology website, it's key features are:
 -   Matching game sign to pictures
 -   Newsletter
 
-# Project Deliverables
-## Project Proposal
-### Title & Objective
-This project's purpose is to inform and engage an audience with their zodiac symbol and their inherit meaning in a fun and exploratory way. They are also interested in how their sign reflects aspects of themselves.
+# User Guide to Cosmic Compass
+Welcome to our guide on the website Cosmic Compass, if you're reading this you likely have a high interest in Astrology or webdesign. Either way this guide will help you to navigate, and make discoveries on our site.
 
-The target audience is a demographic of people that are interested in astrology and have an interest of learning more about it.
+## Homepage
+This is the opening page where you can quickly get a glimpse of your horoscope of the day. Further down we can find widgets that lead to our horoscopes, compatibility test and blog.
 
-### Technology Stack
-#### General Website Technology
-- HTML
-- CSS
-- Javascript
-#### Wireframes and Design
-- Figma
-- GIMP
-#### Version Control and Online Repository
-- Visual Studio Code
-- Github/Git
+## Horoscope
+This is the page that will show you're daily horoscope, all you have to do is click on your zodiac symbol, if you're not aware it is indicated in the image and the alternate text.
 
-### User Flow
-We see it as a common case that return users want to see their horoscope so a basic version is displayed with priority at the top of the homepage. From there we have a navigation bar that leads to various other links where users can interact with the website further. And further down the page we contextualize and link to the other parts of the website that will be described below.
+## Game
+This page has two different games, the compatibility test and the matching game. To play them you can scroll down and find detailed instructions on each game beside them.
 
-User's that are interested in a more in depth horoscope can discover more about the foretellings of different zodiac signs on the horoscope page.
+## Log In / Sign Up
+This is where you can create an acccount or log in if they have an existing account, this allows you to keep progress as a user.
 
-User's that are interested in new insights and discoveries in Astrology can sign up for a newsletter on the newsletter page.
+## Newsletter
+This is a portion where you can sign up for newsletters which mark interesting discoveries in astrology and send out weekly emails with the lateset news.
 
-User's that are interested in knowing their best matchup's in relationships can find it on the game page. On this page user's can also play an interactive game to test their knowledge of the zodiac symbols.
+## Blog
+This is an opinion piece from some of the top minds in Astrology, here you can learn in depth knowledge about astrology including moon patterns, historical context and star locations.
 
-User's can learn what other people are saying on the blog page.
 
-User's can also login or sign-up on the login page. This allows for connecting the front-end design with backend technology to store user data. But for the scope of the project this functionality is strictly front-end.
+## Test 1
+This was a test during a protype iteration of the website, we had a theme of purple and yellow with small amounts of yellow. The user was confused about what was and wasn't a button because the design was too intricate. To accomidate we removed alot of distracting parts of the website.
 
-## Project Progress Report
-### Wireframes & Mockups of UI
-See attached wireframe predesigns.
+## Test 2
+This test was focused on the game and the user's direct behaviour in it. We learned that it wasn't clear that the player had won the matching game and the user couldn't reset the game without reloading the page. We made adjustments thaty added these features.
 
-### User Personas & Accessibility Strategy
-User personas' are people that are interested in learning more about how the universe shapes their lives, especially for those already into Astrology. Users are likely knowledgeable but our site will cater to both experienced and new people to the study of Astrology.
+## Test 3
+This test restructured our website, we learned that the user actually scrolled past some of our content to get to where he wanted to go, which might have been a sign that we have a prioritization problem and a testing problem since in the previous tests users did not navigate as they would outside of a test because they were not scanning like an expected user.
 
-In terms of accessibility; the website is fully adaptive to various screensizes. It has full keyboard functionality, it's also compatible with browser based color-blind modes, has alternative text for all it's images.
+## Test 4
+We restructured our test to have a more disassociated version where instead of informing the user that this was a test we instead opted to find their compatibility with this site. It proved successful, the user navigated to the game page and ran the compatibility game quickly.
 
-### Protoype Walkthrough
-This is covered in the video we submitted as an unlisted youtube link.
+## Test 5
+This final test was also prompted. We got the user who saw the prototype to discuss the homepage, it seemed like she liked it so we ended up keeping the design since we learned that it's ideal for navigation and style purposes.
 
 # Website Design Components and Techniques and Tools
 
@@ -190,51 +183,3 @@ This is a section that displays cards of user reviews, a user can make a review 
 
 ### Account links
 These are links to our companies social media pages, this will be at the bottom of each webpage
-
-# User Guide to Cosmic Compass
-Welcome to our guide on the website Cosmic Compass, if you're reading this you likely have a high interest in Astrology or webdesign. Either way this guide will help you to navigate, and make discoveries on our site.
-
-## Homepage
-This is the opening page where you can quickly get a glimpse of your horoscope of the day. Further down we can find widgets that lead to our horoscopes, compatibility test and blog.
-
-## Horoscope
-This is the page that will show you're daily horoscope, all you have to do is click on your zodiac symbol, if you're not aware it is indicated in the image and the alternate text.
-
-## Game
-This page has two different games, the compatibility test and the matching game. To play them you can scroll down and find detailed instructions on each game beside them.
-
-## Log In / Sign Up
-This is where you can create an acccount or log in if they have an existing account, this allows you to keep progress as a user.
-
-## Newsletter
-This is a portion where you can sign up for newsletters which mark interesting discoveries in astrology and send out weekly emails with the lateset news.
-
-## Blog
-This is an opinion piece from some of the top minds in Astrology, here you can learn in depth knowledge about astrology including moon patterns, historical context and star locations.
-
-# Design Documentation
-## Color Palette
-The website largely sticks to a palette of navy blue, white and yellow because they contrast well and accessibly, the darker blue serving the purpose of a subtle background that highlights the white and yellow content.
-
-## Typography
-For font choices we have choosen: Poppins, and Zen Tokyo Zoo which are imported google fonts. Zen was ideal for titles and subtitles because the font had a fun and stylish yet modernistic look that grabs attention and fit in with our theme. Julius was an ideal font for much of the body text because it served to give the text a simple modern look.
-
-## Design Documentation
-This group followed an Agile design flow which allowed for many dynamic changes and testing to occur providing us with ideal feedback as represented in the user experience documentation. We researched various different astrology sites and asked questions to people that were interested in astrology to get a sense of what type of content they would be interested in. From there we created a 
-
-# User Experience Test & Evalutation
-
-## Test 1
-This was a test during a protype iteration of the website, we had a theme of purple and yellow with small amounts of yellow. The user was confused about what was and wasn't a button because the design was too intricate. To accomidate we removed alot of distracting parts of the website.
-
-## Test 2
-This test was focused on the game and the user's direct behaviour in it. We learned that it wasn't clear that the player had won the matching game and the user couldn't reset the game without reloading the page. We made adjustments thaty added these features.
-
-## Test 3
-This test restructured our website, we learned that the user actually scrolled past some of our content to get to where he wanted to go, which might have been a sign that we have a prioritization problem and a testing problem since in the previous tests users did not navigate as they would outside of a test because they were not scanning like an expected user.
-
-## Test 4
-We restructured our test to have a more disassociated version where instead of informing the user that this was a test we instead opted to find their compatibility with this site. It proved successful, the user navigated to the game page and ran the compatibility game quickly.
-
-## Test 5
-This final test was also prompted. We got the user who saw the prototype to discuss the homepage, it seemed like she liked it so we ended up keeping the design since we learned that it's ideal for navigation and style purposes.
