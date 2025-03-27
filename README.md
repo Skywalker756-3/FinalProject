@@ -1,11 +1,10 @@
 # FinalProject
-This is an astrology website, it features:
+This is an astrology website, it's key features are:
 
 -   Horoscopes
 -   Home page
 -   Blog
 -   Lunar phases
--   Energy in the stars
 -   Sign Identification
 -	  Sign compatibility 
 -   Matching game sign to pictures
@@ -45,15 +44,35 @@ User's can also login or sign-up on the login page. This allows for connecting t
 
 ## Project Progress Report
 ### Wireframes & Mockups of UI
-See attached in submission.
+See attached wireframe predesigns.
+
 ### User Personas & Accessibility Strategy
-User personas' are...
+User personas' are people that are interested in learning more about how the universe shapes their lives, especially for those already into Astrology. Users are likely knowledgeable but our site will cater to both experienced and new people to the study of Astrology.
 
 In terms of accessibility; the website is fully adaptive to various screensizes. It has full keyboard functionality, it's also compatible with browser based color-blind modes, has alternative text for all it's images.
+
 ### Protoype Walkthrough
+This is covered in the video we submitted as an unlisted youtube link.
 
+# Website Design Components and Techniques and Tools
 
-# Website Design Components and Techniques
+### HTML
+Neccarary for designing formats in a website
+
+### CSS 
+Needed for styling the website
+
+### Javascript
+Added functionality and behaviour to website.
+
+### GIMP
+A simple design tool for advanced image manipulation
+
+### Git/ Github
+Versioning system + an online repository
+
+### Discord
+Online interfacing with team
 
 ### New script tradeoff
 Whenever we add a new script file the browser has to load that in-between webpages which can reduce the user experience. However loading a very heavy script in would reduce the time to enter the website in general. So we try to find a balance where we give script heavy webpages their own script.
@@ -143,8 +162,7 @@ h1 {
 ```
 *em is relative to the font of the element, rem is relative to the font of the parent element*
 
-# Website Features
-
+# Project Features
 
 ### Sign Choice
 Users can choose their sign given multiple different
@@ -172,6 +190,27 @@ This is a section that displays cards of user reviews, a user can make a review 
 
 ### Account links
 These are links to our companies social media pages, this will be at the bottom of each webpage
+
+# User Guide to Cosmic Compass
+Welcome to our guide on the website Cosmic Compass, if you're reading this you likely have a high interest in Astrology or webdesign. Either way this guide will help you to navigate, and make discoveries on our site.
+
+## Homepage
+This is the opening page where you can quickly get a glimpse of your horoscope of the day. Further down we can find widgets that lead to our horoscopes, compatibility test and blog.
+
+## Horoscope
+This is the page that will show you're daily horoscope, all you have to do is click on your zodiac symbol, if you're not aware it is indicated in the image and the alternate text.
+
+## Game
+This page has two different games, the compatibility test and the matching game. To play them you can scroll down and find detailed instructions on each game beside them.
+
+## Log In / Sign Up
+This is where you can create an acccount or log in if they have an existing account, this allows you to keep progress as a user.
+
+## Newsletter
+This is a portion where you can sign up for newsletters which mark interesting discoveries in astrology and send out weekly emails with the lateset news.
+
+## Blog
+This is an opinion piece from some of the top minds in Astrology, here you can learn in depth knowledge about astrology including moon patterns, historical context and star locations.
 
 # Design Documentation
 ## Color Palette
